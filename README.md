@@ -10,6 +10,13 @@ This repository is about my personal portfolio
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Storybook](https://storybook.js.org/)
+- [Jest](https://jestjs.io/)
+- [Testing Library](https://testing-library.com/)
+- [Axe](https://www.deque.com/axe/)
+- [Husky](https://typicode.github.io/husky/)
+- [commitlint](https://commitlint.js.org/)
+- [next-themes](https://github.com/pacocoursey/next-themes/)
 
 ## Get Started
 
