@@ -1,7 +1,7 @@
 export default function ImageContainer() {
 	return (
 		<div>
-			<img src="#" />
+			<img src="#" alt="Some fancy description example" />
 		</div>
 	);
 }
