@@ -1,7 +1,9 @@
 # Portfolio
+
 This repository is about my personal portfolio
 
 ## Stack
+
 - [React](https://react.dev/)
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://typescriptlang.org/)
@@ -10,11 +12,15 @@ This repository is about my personal portfolio
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## Get Started
+
 Clone repo
+
 ```
 git clone https://github.com/ulysses-ck/portfolio-react-next
 ```
+
 Install dependencies
+
 ```sh
 npm install
 ```
@@ -35,10 +41,13 @@ By default, the server listen at:
 [http://localhost:3000](http://localhost:3000)
 
 For linting, use:
+
 ```sh
 npm run lint
 ```
+
 And formatting, use:
+
 ```sh
 npm run format
 ```
