@@ -1,1 +1,2 @@
-npm test
+npm run test:jest
+npm run test:playwright
