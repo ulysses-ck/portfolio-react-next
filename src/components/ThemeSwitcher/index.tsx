@@ -1,8 +1,8 @@
 "use client";
 import { useTheme } from "next-themes";
-import SVGGenericContainer from "@/components/SVGGenericContainer";
-import SVGSun from "@/components/SVGSun";
-import SVGMoon from "@/components/SVGMoon";
+import SVGGenericContainer from "../SVGGenericContainer";
+import SVGSun from "../SVGMoon";
+import SVGMoon from "../SVGMoon";
 
 export default function ThemeSwitcher() {
 	const { theme, setTheme } = useTheme();
@@ -15,6 +15,7 @@ export default function ThemeSwitcher() {
 	return (
 		<button
 			value={theme === "light" ? "Light Theme" : "Dark Theme"}
+			className="bg-light-blue-primary dark:bg-blue-primary rounded-full p-2 flex justify-center items-center"
 			onClick={handleChangeTheme}
 		>
 			{theme === "light" ? (
