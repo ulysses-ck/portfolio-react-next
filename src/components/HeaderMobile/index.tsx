@@ -61,7 +61,7 @@ export default function HeaderMobile({ className }: { className?: string }) {
 
 	return (
 		<header
-			className={`${className || ""}flex justify-center items-center relative`}
+			className={`flex justify-center items-center relative${className || ""}`}
 		>
 			<ul
 				className={styles.HeaderUlLinks}
