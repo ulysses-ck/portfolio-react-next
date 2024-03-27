@@ -6,6 +6,7 @@ export default function SVGDebian({ color }: { color: string }) {
 			width="128"
 			height="128"
 			version="1.1"
+			viewBox="0 0 128 128"
 		>
 			<title>Clarity Icon</title>
 			<desc>This is shape (source) for Clarity vector icon theme for gtk</desc>

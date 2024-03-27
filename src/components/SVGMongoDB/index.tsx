@@ -8,7 +8,7 @@ export default function SVGMongoDB() {
 			width="800px"
 			height="800px"
 			viewBox="0 0 512 512"
-			enable-background="new 0 0 512 512"
+			enableBackground="new 0 0 512 512"
 			xmlSpace="preserve"
 		>
 			<g id="3e91140ac1bfb9903b91c1b0ca092167">

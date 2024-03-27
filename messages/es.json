@@ -1,6 +1,8 @@
 {
 	"IndexPage": {
 		"title": "Ulises Apaza",
-"subtitle": "Desarrollador Web"
+		"subtitle": "Desarrollador Web",
+		"titleAbout": "Sobre mí",
+		"descriptionAbout": "Hola! Soy Ulises, y me especializo en las tecnologías del desarrollo Front End dentro del ecosistema de JavaScript, particularmente React.js y Node.js. Mi pasión radica en optimizar el rendimiento y garantizar medidas de seguridad sólidas en cada proyecto que emprendo. A continuación encontrará una lista completa de mi experiencia:"
 	}
 }
