@@ -14,7 +14,7 @@ import SVGBars from "../SVGBars";
 import SVGCross from "../SVGCross";
 import SVGGenericContainer from "../SVGGenericContainer";
 
-interface menuLink {
+interface MenuLink {
 	name: string;
 	href: string;
 	// icon would be a component that has a prop color
@@ -32,7 +32,7 @@ export default function HeaderMobile({ className }: { className?: string }) {
 		SVGSendEmail,
 	};
 
-	const menu: menuLink[] = [
+	const menu: MenuLink[] = [
 		{
 			name: "Home",
 			href: "#home",

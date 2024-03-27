@@ -87,7 +87,7 @@ export default function Index() {
 			<div className="absolute top-2 right-5">
 				<LanguageSelect />
 			</div>
-			<main className="w-full overflow-y-scroll flex flex-col">
+			<main className="w-full overflow-y-scroll flex flex-col gap-4">
 				<SectionGeneric className="bg-light-blue-primary dark:bg-blue-primary h-lvh flex-shrink-0 flex justify-center items-center flex-col">
 					<ImageContainer width="180px" height="180px">
 						<Image
@@ -99,7 +99,7 @@ export default function Index() {
 					<h1 className="text-4xl text-center">{t("title")}</h1>
 					<p className="text-center">{t("subtitle")}</p>
 				</SectionGeneric>
-				<SectionGeneric className="bg-light-blue-primary dark:bg-blue-primary h-lvh flex-shrink-0 p-2 flex flex-col items-center gap-4">
+				<SectionGeneric className="bg-light-blue-primary dark:bg-blue-primary min-h-lvh flex-shrink-0 p-2 flex flex-col items-center gap-4">
 					<h2>{t("titleAbout")}</h2>
 					<p>{t("descriptionAbout")}</p>
 					<div className={styles.GridHardSkills}>
@@ -108,15 +108,18 @@ export default function Index() {
 							return (
 								<div
 									key={hardSkill.title}
-									className="w-[55px] p-1 h-auto rounded-2xl shadow-2xl flex justify-center items-center"
+									className="w-[55px] p-2 h-auto rounded-2xl shadow-md flex justify-center items-center"
 								>
-									<SVGGenericContainer width="50px" height="50px">
+									<SVGGenericContainer width="35px" height="35px">
 										<Component color={hardSkill.color} />
 									</SVGGenericContainer>
 								</div>
 							);
 						})}
 					</div>
+				</SectionGeneric>
+				<SectionGeneric className="flex flex-col min-h-lvh flex-shrink-0 items-center">
+					<h2>{t("titleWork")}</h2>
 				</SectionGeneric>
 			</main>
 		</>
