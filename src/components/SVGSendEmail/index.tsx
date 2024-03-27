@@ -10,30 +10,30 @@ export default function SVGSendEmail({ color }: { color: string }) {
 			<path
 				d="M44 24V9H24H4V24V39H24"
 				stroke={color}
-				stroke-width="4"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				strokeWidth="4"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 			/>
 			<path
 				d="M44 34L30 34"
 				stroke={color}
-				stroke-width="4"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				strokeWidth="4"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 			/>
 			<path
 				d="M39 29L44 34L39 39"
 				stroke={color}
-				stroke-width="4"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				strokeWidth="4"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 			/>
 			<path
 				d="M4 9L24 24L44 9"
 				stroke={color}
-				stroke-width="4"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				strokeWidth="4"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 			/>
 		</svg>
 	);

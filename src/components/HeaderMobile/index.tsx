@@ -21,7 +21,7 @@ interface menuLink {
 	Icon: React.FC<{ color: string }>;
 }
 
-export default function HeaderMobile() {
+export default function HeaderMobile({ className }: { className?: string }) {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const { theme } = useTheme();
 
@@ -60,7 +60,9 @@ export default function HeaderMobile() {
 	};
 
 	return (
-		<header className="flex justify-center items-center relative">
+		<header
+			className={`${className || ""}flex justify-center items-center relative`}
+		>
 			<ul
 				className={styles.HeaderUlLinks}
 				style={{
@@ -71,10 +73,10 @@ export default function HeaderMobile() {
 					<li key={index} className="w-fit h-fit">
 						<a
 							href={link.href}
-							className="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-light-blue-primary dark:bg-blue-primary"
+							className="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-light-blue-primary dark:bg-blue-primary shadow-md"
 						>
 							<SVGGenericContainer width={"25px"} height={"25px"}>
-								<link.Icon color={theme === "light" ? "#fff" : "#000"} />
+								<link.Icon color={theme === "light" ? "#000" : "#fff"} />
 							</SVGGenericContainer>
 						</a>
 					</li>
@@ -83,15 +85,15 @@ export default function HeaderMobile() {
 			<button
 				value={menuOpen ? "Close" : "Open"}
 				onClick={handleClickButtonMenu}
-				className="w-[60px] h-[60px] flex items-center justify-center bg-light-blue-primary dark:bg-blue-primary rounded-full"
+				className="w-[60px] h-[60px] flex items-center justify-center bg-light-blue-primary dark:bg-blue-primary rounded-full shadow-md"
 			>
 				{menuOpen ? (
 					<SVGGenericContainer width={"25px"} height={"25px"}>
-						<SVGCross color={theme === "light" ? "#fff" : "#000"} />
+						<SVGCross color={theme === "light" ? "#000" : "#fff"} />
 					</SVGGenericContainer>
 				) : (
 					<SVGGenericContainer width={"25px"} height={"25px"}>
-						<SVGBars color={theme === "light" ? "#fff" : "#000"} />
+						<SVGBars color={theme === "light" ? "#000" : "#fff"} />
 					</SVGGenericContainer>
 				)}
 			</button>

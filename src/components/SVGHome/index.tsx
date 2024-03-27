@@ -10,9 +10,9 @@ export default function SVGHome({ color }: { color: string }) {
 			<path
 				d="M5 10L12 3L19 10L19 20H5L5 10Z"
 				stroke={color}
-				stroke-width="1.5"
-				stroke-linecap="round"
-				stroke-linejoin="round"
+				strokeWidth="1.5"
+				strokeLinecap="round"
+				strokeLinejoin="round"
 			/>
 		</svg>
 	);

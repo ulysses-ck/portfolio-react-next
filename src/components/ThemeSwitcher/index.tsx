@@ -24,7 +24,7 @@ export default function ThemeSwitcher() {
 				</SVGGenericContainer>
 			) : (
 				<SVGGenericContainer width="50px" height="50px">
-					<SVGMoon color="#fff"></SVGMoon>
+					<SVGMoon color="#000"></SVGMoon>
 				</SVGGenericContainer>
 			)}
 		</button>

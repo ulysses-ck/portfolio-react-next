@@ -10,7 +10,12 @@ import styles from "./LanguageSelect.module.css";
 import SVGChevron from "../SVGChevron";
 import SVGGenericContainer from "../SVGGenericContainer";
 
-export default function LanguageSelect({ ...props }) {
+export default function LanguageSelect({
+	className,
+	...props
+}: {
+	className?: string;
+}) {
 	const [menuLanguageOpen, setMenuLanguageOpen] = useState(false);
 	const { theme } = useTheme();
 
@@ -24,7 +29,7 @@ export default function LanguageSelect({ ...props }) {
 	};
 
 	return (
-		<div className="w-fit h-fit relative">
+		<div className={`${className || ""}w-fit h-fit relative`}>
 			<button
 				onClick={handleOpenMenuLanguage}
 				value={menuLanguageOpen ? "Close" : "Open"}
