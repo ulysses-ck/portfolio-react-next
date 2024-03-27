@@ -5,6 +5,3 @@
 	padding: 8px;
 	flex-direction: column;
 }
-.LanguageSelectButton {
-	box-shadow: 10px 10px 45px 1px rgba(0, 0, 0, 0.65);
-}

@@ -84,7 +84,7 @@ export default function Index() {
 		<>
 			<HeaderMobile className=" self-end p-2" />
 			<ThemeSwitcher className=" absolute top-2 left-2" />
-			<div className="absolute top-2 right-2">
+			<div className="absolute top-2 right-5">
 				<LanguageSelect />
 			</div>
 			<main className="w-full overflow-y-scroll flex flex-col">

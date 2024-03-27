@@ -33,7 +33,7 @@ export default function LanguageSelect({
 			<button
 				onClick={handleOpenMenuLanguage}
 				value={menuLanguageOpen ? "Close" : "Open"}
-				className={`${styles.LanguageSelectButton} rounded-md p-2 bg-light-blue-primary dark:bg-blue-primary flex justify-around items-center`}
+				className={`shadow-md rounded-md p-2 bg-light-blue-primary dark:bg-blue-primary flex justify-around items-center`}
 			>
 				<span>Language</span>
 				<SVGGenericContainer width="16px" height="16px">
@@ -44,7 +44,7 @@ export default function LanguageSelect({
 				</SVGGenericContainer>
 			</button>
 			<ul
-				className={`rounded-md p-2 bg-light-blue-primary dark:bg-blue-primary w-full ${styles.LanguageSelectUl}`}
+				className={`shadow-md rounded-md p-2 bg-light-blue-primary dark:bg-blue-primary w-full ${styles.LanguageSelectUl}`}
 				style={{
 					display: menuLanguageOpen ? "flex" : "none",
 				}}
