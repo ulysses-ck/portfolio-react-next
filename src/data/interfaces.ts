@@ -1,3 +1,9 @@
+export interface HardSkill {
+	title: string;
+	component: React.FC<{ color: string }>;
+	color: string;
+}
+
 export interface ProjectWork {
 	imageProject: ImageProject;
 	titleProjectWork: string;

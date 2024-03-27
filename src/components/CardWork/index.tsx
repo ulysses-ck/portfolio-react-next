@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { ProjectWork } from "./interfaces";
+import { ProjectWork } from "@/data/interfaces";
 
 import SVGGenericContainer from "../SVGGenericContainer";
 import SVGOpenExternal from "../SVGOpenExternal";
@@ -12,7 +12,7 @@ export default function CardWork({
 	projectWork: ProjectWork;
 }) {
 	return (
-		<article className="flex flex-col rounded-2xl bg-light-blue-primary dark:bg-blue-secondary">
+		<article className="flex flex-col rounded-2xl bg-light-blue-primary dark:bg-blue-secondary shadow-md dark:shadow-md">
 			<figure className="relative rounded-t-2xl">
 				<a
 					href={projectWork.urlProject}

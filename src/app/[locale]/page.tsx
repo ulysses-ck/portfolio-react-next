@@ -13,28 +13,11 @@ import ImageProfile from "../../../public/profile-photo.jpg";
 // components
 import SectionGeneric from "@/components/SectionGeneric";
 import ImageContainer from "@/components/ImageContainer";
-
-import SVGAngular from "@/components/SVGAngular";
-import SVGAWS from "@/components/SVGAWS";
-import SVGCSS from "@/components/SVGCSS";
-import SVGDebian from "@/components/SVGDebian";
-import SVGFirebase from "@/components/SVGFirebase";
-import SVGGit from "@/components/SVGGit";
-import SVGGoogleClod from "@/components/SVGGoogleCloud";
-import SVGGraphQL from "@/components/SVGGraphQL";
-import SVGHTML from "@/components/SVGHTML";
-import SVGJavaScript from "@/components/SVGJavaScript";
-import SVGMongoDB from "@/components/SVGMongoDB";
-import SVGMySQL from "@/components/SVGMySQL";
-import SVGNodejs from "@/components/SVGNodejs";
-import SVGPostgreSQL from "@/components/SVGPostgreSQL";
-import SVGReact from "@/components/SVGReact";
-import SVGSanity from "@/components/SVGSanity";
-import SVGShopify from "@/components/SVGShopify";
-import SVGTailwindCSS from "@/components/SVGTailwindCSS";
-import SVGTypescript from "@/components/SVGTypeScript";
-import SVGVue from "@/components/SVGVue";
 import SVGGenericContainer from "@/components/SVGGenericContainer";
+
+// data
+import { hardSkills, projects } from "@/data";
+import CardWork from "@/components/CardWork";
 
 const LanguageSelect = dynamic(() => import("@/components/LanguageSelect"), {
 	ssr: false,
@@ -50,35 +33,6 @@ const HeaderMobile = dynamic(() => import("@/components/HeaderMobile"), {
 
 export default function Index() {
 	const t = useTranslations("IndexPage");
-
-	interface HardSkill {
-		title: string;
-		component: React.FC<{ color: string }>;
-		color: string;
-	}
-
-	const hardSkills: HardSkill[] = [
-		{ title: "Angular", component: SVGAngular, color: "#c3002f" },
-		{ title: "AWS", component: SVGAWS, color: "" },
-		{ title: "React.js", component: SVGReact, color: "#149eca" },
-		{ title: "Node.js", component: SVGNodejs, color: "#63b84a" },
-		{ title: "TypeScript", component: SVGTypescript, color: "#3178c6" },
-		{ title: "CSS", component: SVGCSS, color: "#0068ba" },
-		{ title: "Debian", component: SVGDebian, color: "#d70751" },
-		{ title: "Firebase", component: SVGFirebase, color: "#ffa308" },
-		{ title: "Git", component: SVGGit, color: "#f05639" },
-		{ title: "Google Cloud", component: SVGGoogleClod, color: "" },
-		{ title: "GraphQL", component: SVGGraphQL, color: "#e63bae" },
-		{ title: "HTML", component: SVGHTML, color: "#dd4b25" },
-		{ title: "JavaScript", component: SVGJavaScript, color: "#d8c000" },
-		{ title: "MongoDB", component: SVGMongoDB, color: "#439934" },
-		{ title: "MySQL", component: SVGMySQL, color: "#00618a" },
-		{ title: "PostgreSQL", component: SVGPostgreSQL, color: "#2f6792" },
-		{ title: "Sanity", component: SVGSanity, color: "" },
-		{ title: "Shopify", component: SVGShopify, color: "#7fba35" },
-		{ title: "Tailwind CSS", component: SVGTailwindCSS, color: "#42a9a8" },
-		{ title: "Vue", component: SVGVue, color: "" },
-	];
 
 	return (
 		<>
@@ -118,8 +72,11 @@ export default function Index() {
 						})}
 					</div>
 				</SectionGeneric>
-				<SectionGeneric className="flex flex-col min-h-lvh flex-shrink-0 items-center">
+				<SectionGeneric className="flex flex-col min-h-lvh flex-shrink-0 items-center gap-6">
 					<h2>{t("titleWork")}</h2>
+					{projects.map((project) => (
+						<CardWork key={project.titleProjectWork} projectWork={project} />
+					))}
 				</SectionGeneric>
 			</main>
 		</>
