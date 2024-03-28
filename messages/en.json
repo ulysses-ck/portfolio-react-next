@@ -4,6 +4,7 @@
 		"subtitle": "Web Developer",
 		"titleAbout": "About",
 		"descriptionAbout": "Hello, I'm Ulises, and I specialize in the frontend technologies within the JavaScript ecosystem, particularly React.js and Node.js. My passion lies in optimizing performance and ensuring robust security measures in every project I undertake. Below, you'll find a comprehensive list of my expertise:",
-		"titleWork": "Work"
+		"titleWork": "Work",
+		"titleContact": "Contact"
 	}
 }
