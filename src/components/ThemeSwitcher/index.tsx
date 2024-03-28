@@ -10,9 +10,10 @@ export default function ThemeSwitcher({ className }: { className?: string }) {
 	const handleChangeTheme = () => {
 		setTheme(theme === "light" ? "dark" : "light");
 	};
-	// TODO write a test e2e for this component
+
 	return (
 		<button
+			name="theme-switcher"
 			value={theme === "light" ? "Light Theme" : "Dark Theme"}
 			className={`shadow-md bg-light-blue-primary dark:bg-blue-primary rounded-full p-2 flex justify-center items-center${className || ""}`}
 			onClick={handleChangeTheme}
