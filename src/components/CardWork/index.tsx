@@ -12,7 +12,7 @@ export default function CardWork({
 	projectWork: ProjectWork;
 }) {
 	return (
-		<article className="flex flex-col rounded-2xl bg-light-blue-primary dark:bg-blue-secondary shadow-md dark:shadow-md">
+		<article className="flex flex-col rounded-2xl bg-light-blue-primary dark:bg-blue-secondary shadow-md dark:shadow-md p-4">
 			<figure className="relative rounded-t-2xl">
 				<a
 					href={projectWork.urlProject}
@@ -22,21 +22,20 @@ export default function CardWork({
 						<SVGOpenExternal color="black"></SVGOpenExternal>
 					</SVGGenericContainer>
 				</a>
-				<ImageContainer width="200px" height="auto" className="rounded-t-2xl">
-					<Image
-						src={projectWork.imageProject.src}
-						width={projectWork.imageProject.width}
-						height={projectWork.imageProject.height}
-						alt={projectWork.imageProject.alt}
-						className={`rounded-t-2xl object-cover w-full h-full ${projectWork.imageProject.className}`}
-					/>
-				</ImageContainer>
+				<Image
+					src={projectWork.imageProject.src}
+					width={projectWork.imageProject.width}
+					height={projectWork.imageProject.height}
+					alt={projectWork.imageProject.alt}
+					priority
+					className={`rounded-t-2xl object-cover w-full h-full ${projectWork.imageProject.className}`}
+				/>
 			</figure>
 			<h3 className="text-center">{projectWork.titleProjectWork}</h3>
 			<ul className="flex gap-2 justify-center p-4">
 				{projectWork.techStack.map((tech) => (
 					<li key={tech.title} title={tech.title}>
-						<SVGGenericContainer width="15px" height="15px">
+						<SVGGenericContainer width="25px" height="25px">
 							<tech.Component color={tech.color}></tech.Component>
 						</SVGGenericContainer>
 					</li>

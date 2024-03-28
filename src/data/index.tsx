@@ -22,6 +22,10 @@ import SVGTailwindCSS from "@/components/SVGTailwindCSS";
 import SVGTypescript from "@/components/SVGTypeScript";
 import SVGVue from "@/components/SVGVue";
 
+// images
+import carlasfoodImage from "../../public/carlasfood.png";
+import dictappImage from "../../public/dictapp.png";
+
 export const hardSkills: HardSkill[] = [
 	{ title: "Angular", component: SVGAngular, color: "#c3002f" },
 	{ title: "AWS", component: SVGAWS, color: "" },
@@ -50,11 +54,11 @@ export const projects: ProjectWork[] = [
 		titleProjectWork: "Dictionary App",
 		urlProject: "https://dictapp.netlify.app/",
 		imageProject: {
-			width: 100,
+			width: 900,
 
-			height: 100,
+			height: 900,
 			alt: "Dictionary App",
-			src: "https://via.placeholder.com/150",
+			src: dictappImage.src,
 		},
 		techStack: [
 			{
@@ -63,14 +67,14 @@ export const projects: ProjectWork[] = [
 				Component: () => <SVGReact color="#149eca" />,
 			},
 			{
-				title: "Tailwind CSS",
-				color: "#42a9a8",
-				Component: () => <SVGTailwindCSS color="#42a9a8" />,
+				title: "HTML",
+				color: "#dd4b25",
+				Component: () => <SVGHTML color="#dd4b25" />,
 			},
 			{
-				title: "Firebase",
-				color: "#ffa308",
-				Component: () => <SVGFirebase color="#ffa308" />,
+				title: "CSS",
+				color: "#0068ba",
+				Component: () => <SVGCSS color="#0068ba" />,
 			},
 		],
 	},
@@ -78,27 +82,27 @@ export const projects: ProjectWork[] = [
 		titleProjectWork: "Carla's Food",
 		urlProject: "https://github.com/ulysses-ck/carlasfood",
 		imageProject: {
-			width: 100,
+			width: 900,
 
-			height: 100,
+			height: 900,
 			alt: "Restaurant App page that shows a menu",
-			src: "https://via.placeholder.com/150",
+			src: carlasfoodImage.src,
 		},
 		techStack: [
 			{
-				title: "React.js",
-				color: "#149eca",
-				Component: () => <SVGReact color="#149eca" />,
+				title: "Node.js",
+				color: "#63b84a",
+				Component: () => <SVGNodejs color="#63b84a" />,
 			},
 			{
-				title: "Tailwind CSS",
-				color: "#42a9a8",
-				Component: () => <SVGTailwindCSS color="#42a9a8" />,
+				title: "HTML",
+				color: "#dd4b25",
+				Component: () => <SVGHTML color="#dd4b25" />,
 			},
 			{
-				title: "Firebase",
-				color: "#ffa308",
-				Component: () => <SVGFirebase color="#ffa308" />,
+				title: "CSS",
+				color: "#0068ba",
+				Component: () => <SVGCSS color="#0068ba" />,
 			},
 		],
 	},

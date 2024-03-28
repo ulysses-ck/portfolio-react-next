@@ -52,6 +52,7 @@ export default function Index() {
 					<ImageContainer width="180px" height="180px">
 						<Image
 							src={ImageProfile}
+							priority
 							alt="Profile Picture of Ulises Apaza"
 							className="rounded-full"
 						/>
