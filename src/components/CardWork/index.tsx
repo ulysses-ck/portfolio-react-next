@@ -12,7 +12,7 @@ export default function CardWork({
 }) {
 	return (
 		<article className="flex flex-col rounded-2xl bg-light-blue-primary dark:bg-blue-primary shadow-md dark:shadow-md">
-			<a href={projectWork.urlProject} className="w-fit h-fit">
+			<a href={projectWork.urlProject} className="w-fit h-fit" target="_blank">
 				<figure className="relative rounded-t-2xl">
 					<span className="w-[30px] h-[30px] absolute top-0 right-0 flex justify-center items-center bg-yellow-accent-color rounded-tr-2xl">
 						<SVGGenericContainer width="15px" height="15px">
