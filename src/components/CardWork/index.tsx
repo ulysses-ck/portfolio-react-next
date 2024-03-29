@@ -11,7 +11,7 @@ export default function CardWork({
 	projectWork: ProjectWork;
 }) {
 	return (
-		<article className="flex flex-col rounded-2xl bg-light-blue-primary dark:bg-blue-secondary shadow-md dark:shadow-md p-4">
+		<article className="flex flex-col rounded-2xl bg-light-blue-primary dark:bg-blue-secondary shadow-md dark:shadow-md">
 			<figure className="relative rounded-t-2xl">
 				<a
 					href={projectWork.urlProject}

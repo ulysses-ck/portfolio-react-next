@@ -12,7 +12,7 @@ export default function HeaderDesktop({
 }) {
 	const linksNav = [
 		{ href: "#home", label: "Home" },
-		{ href: "#resume", label: "About" },
+		{ href: "#about", label: "About" },
 		{ href: "#work", label: "Work" },
 		{ href: "#contact", label: "Contact" },
 	];
@@ -22,13 +22,15 @@ export default function HeaderDesktop({
 			className={`flex flex-col items-center gap-6 justify-center${classNameHeader}`}
 		>
 			<nav className="w-fit h-fit">
-				<ul className="flex flex-col items-center gap-6">
+				<ul className="flex flex-col items-center gap-8">
 					{linksNav.map((link) => (
-						<li
-							key={link.href}
-							className="shadow-md rounded-[30px] p-2 bg-light-blue-primary dark:bg-blue-primary"
-						>
-							<a href={link.href}>{link.label}</a>
+						<li key={link.href} className="w-fit h-fit">
+							<a
+								className="shadow-md rounded-[30px] bg-light-blue-primary dark:bg-blue-primary hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary p-2"
+								href={link.href}
+							>
+								{link.label}
+							</a>
 						</li>
 					))}
 				</ul>

@@ -39,8 +39,8 @@ export default function HeaderMobile({ className }: { className?: string }) {
 			Icon: components.SVGHome,
 		},
 		{
-			name: "Resume",
-			href: "#resume",
+			name: "About",
+			href: "#about",
 			Icon: components.SVGResume,
 		},
 		{
@@ -73,7 +73,7 @@ export default function HeaderMobile({ className }: { className?: string }) {
 					<li key={index} className="w-fit h-fit">
 						<a
 							href={link.href}
-							className="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-light-blue-primary dark:bg-blue-primary shadow-md"
+							className="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-light-blue-primary dark:bg-blue-primary shadow-md hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary"
 						>
 							<SVGGenericContainer width={"25px"} height={"25px"}>
 								<link.Icon color={theme === "light" ? "#000" : "#fff"} />
@@ -85,7 +85,7 @@ export default function HeaderMobile({ className }: { className?: string }) {
 			<button
 				value={menuOpen ? "Close" : "Open"}
 				onClick={handleClickButtonMenu}
-				className="w-[60px] h-[60px] flex items-center justify-center bg-light-blue-primary dark:bg-blue-primary rounded-full shadow-md"
+				className="w-[60px] h-[60px] flex items-center justify-center bg-light-blue-primary dark:bg-blue-primary rounded-full shadow-md hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary"
 			>
 				{menuOpen ? (
 					<SVGGenericContainer width={"25px"} height={"25px"}>

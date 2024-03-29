@@ -33,7 +33,7 @@ export default function LanguageSelect({
 			<button
 				onClick={handleOpenMenuLanguage}
 				value={menuLanguageOpen ? "Close" : "Open"}
-				className={`shadow-md rounded-md p-2 bg-light-blue-primary dark:bg-blue-primary flex justify-around items-center`}
+				className={`shadow-md rounded-md p-2 bg-light-blue-primary dark:bg-blue-primary flex justify-around items-center hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary`}
 			>
 				<span>Language</span>
 				<SVGGenericContainer width="16px" height="16px">

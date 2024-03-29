@@ -51,9 +51,12 @@ export default function Index() {
 				<LanguageSelect />
 			</div>
 			<HeaderDesktop classNameHeader=" hidden sm:flex place-self-center px-8" />
-			<main className="w-full overflow-y-scroll flex flex-col gap-4">
-				<SectionGeneric className="bg-light-blue-primary dark:bg-blue-primary h-lvh flex-shrink-0 flex justify-center items-center flex-col">
-					<ImageContainer width="180px" height="180px">
+			<main className="w-full overflow-y-scroll flex flex-col gap-4 scroll-smooth">
+				<SectionGeneric
+					className="bg-light-blue-primary dark:bg-blue-primary h-lvh flex-shrink-0 flex justify-center items-center flex-col md:flex-row md:gap-10"
+					id="home"
+				>
+					<ImageContainer className="w-44 h-44 sm:w-80 sm:h-80">
 						<Image
 							src={ImageProfile}
 							priority
@@ -61,13 +64,19 @@ export default function Index() {
 							className="rounded-full"
 						/>
 					</ImageContainer>
-					<h1 className="text-4xl text-center">{t("title")}</h1>
-					<p className="text-center">{t("subtitle")}</p>
+					<div className="flex flex-col">
+						<h1 className="text-4xl text-center">{t("title")}</h1>
+						<p className="text-center">{t("subtitle")}</p>
+					</div>
 				</SectionGeneric>
-				<SectionGeneric className="bg-light-blue-primary dark:bg-blue-primary min-h-lvh flex-shrink-0 p-2 flex flex-col items-center justify-center gap-4">
-					<h2>{t("titleAbout")}</h2>
-					<p>{t("descriptionAbout")}</p>
-					<div className={styles.GridHardSkills}>
+
+				<SectionGeneric
+					className="bg-light-blue-primary dark:bg-blue-primary min-h-lvh flex-shrink-0 p-2 flex flex-col items-center justify-center gap-4"
+					id="about"
+				>
+					<h2 className="text-2xl font-bold">{t("titleAbout")}</h2>
+					<p className="px-8 sm:px-24">{t("descriptionAbout")}</p>
+					<div className="grid grid-cols-3 gap-7 sm:flex sm:flex-wrap sm:justify-center sm:px-10 md:px-24">
 						{hardSkills.map((hardSkill) => {
 							const Component = hardSkill.component;
 							return (
@@ -84,14 +93,20 @@ export default function Index() {
 						})}
 					</div>
 				</SectionGeneric>
-				<SectionGeneric className="flex flex-col min-h-lvh flex-shrink-0 items-center gap-6 sm:px-24">
-					<h2>{t("titleWork")}</h2>
+				<SectionGeneric
+					className="flex flex-col min-h-lvh flex-shrink-0 items-center gap-6 px-8 sm:px-24"
+					id="work"
+				>
+					<h2 className="text-2xl font-bold">{t("titleWork")}</h2>
 					{projects.map((project) => (
 						<CardWork key={project.titleProjectWork} projectWork={project} />
 					))}
 				</SectionGeneric>
-				<SectionGeneric className="flex flex-col items-center gap-4 p-2 min-h-lvh justify-center">
-					<h2>{t("titleContact")}</h2>
+				<SectionGeneric
+					className="flex flex-col items-center gap-4 p-2 min-h-lvh justify-center"
+					id="contact"
+				>
+					<h2 className="text-2xl font-bold">{t("titleContact")}</h2>
 					<FormContact sendMessage={sendMessage}></FormContact>
 				</SectionGeneric>
 			</main>

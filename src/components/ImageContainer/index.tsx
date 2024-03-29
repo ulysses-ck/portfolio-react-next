@@ -1,11 +1,11 @@
 export default function ImageContainer({
-	width,
-	height,
+	width = "",
+	height = "",
 	children,
 	className = "",
 }: {
-	width: string;
-	height: string;
+	width?: string;
+	height?: string;
 	children: React.ReactNode;
 	className?: string;
 }) {
