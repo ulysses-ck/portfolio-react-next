@@ -36,7 +36,7 @@ export default function HeaderDesktop({
 				</ul>
 			</nav>
 			<LanguageSelect />
-			<ThemeSwitcher />
+			<ThemeSwitcher name="theme-switcher-desktop" />
 		</header>
 	);
 }

@@ -14,7 +14,7 @@ test("change from system to light", async ({ page }) => {
 
 	// get ThemeSwitcher button of the page
 	const themeSwitcherButton = await page.waitForSelector(
-		'button[name="theme-switcher"]',
+		'button[name="theme-switcher-desktop"]',
 		{ timeout: 30000 },
 	);
 
@@ -32,7 +32,7 @@ test("change to dark", async ({ page }) => {
 
 	// get ThemeSwitcher button of the page
 	const themeSwitcherButton = await page.waitForSelector(
-		'button[name="theme-switcher"]',
+		'button[name="theme-switcher-desktop"]',
 		{ timeout: 30000 },
 	);
 

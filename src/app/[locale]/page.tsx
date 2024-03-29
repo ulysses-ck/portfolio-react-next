@@ -4,9 +4,6 @@ import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
-// styles
-import styles from "./page.module.css";
-
 // assets
 import ImageProfile from "../../../public/profile-photo.jpg";
 
@@ -46,14 +43,17 @@ export default function Index() {
 			<div className="w-fit h-fit absolute bottom-2 left-5 block sm:hidden z-10">
 				<HeaderMobile className=" self-end p-2 sm:hidden" />
 			</div>
-			<ThemeSwitcher className=" absolute top-2 left-2 sm:hidden z-10" />
+			<ThemeSwitcher
+				name="theme-switcher-mobile"
+				className=" absolute top-2 left-2 sm:hidden z-10"
+			/>
 			<div className="absolute top-2 right-5 sm:hidden z-10">
 				<LanguageSelect />
 			</div>
 			<HeaderDesktop classNameHeader=" hidden sm:flex place-self-center px-8" />
 			<main className="w-full overflow-y-scroll flex flex-col gap-4 scroll-smooth">
 				<SectionGeneric
-					className="bg-light-blue-primary dark:bg-blue-primary h-lvh flex-shrink-0 flex justify-center items-center flex-col md:flex-row md:gap-10"
+					className="bg-light-blue-primary dark:bg-blue-primary h-screen flex-shrink-0 flex justify-center items-center flex-col md:flex-row md:gap-10"
 					id="home"
 				>
 					<ImageContainer className="w-44 h-44 sm:w-80 sm:h-80">
@@ -71,7 +71,7 @@ export default function Index() {
 				</SectionGeneric>
 
 				<SectionGeneric
-					className="bg-light-blue-primary dark:bg-blue-primary min-h-lvh flex-shrink-0 p-2 flex flex-col items-center justify-center gap-4"
+					className="bg-light-blue-primary dark:bg-blue-primary min-h-screen flex-shrink-0 p-2 flex flex-col items-center justify-center gap-4"
 					id="about"
 				>
 					<h2 className="text-2xl font-bold">{t("titleAbout")}</h2>
@@ -94,7 +94,7 @@ export default function Index() {
 					</div>
 				</SectionGeneric>
 				<SectionGeneric
-					className="flex flex-col min-h-lvh flex-shrink-0 items-center gap-6 px-8 sm:px-24"
+					className="flex flex-col min-h-screen flex-shrink-0 items-center justify-center gap-6 px-8 sm:px-24 py-20"
 					id="work"
 				>
 					<h2 className="text-2xl font-bold">{t("titleWork")}</h2>
@@ -103,7 +103,7 @@ export default function Index() {
 					))}
 				</SectionGeneric>
 				<SectionGeneric
-					className="flex flex-col items-center gap-4 p-2 min-h-lvh justify-center"
+					className="flex flex-col items-center gap-4 p-2 min-h-screen justify-center"
 					id="contact"
 				>
 					<h2 className="text-2xl font-bold">{t("titleContact")}</h2>

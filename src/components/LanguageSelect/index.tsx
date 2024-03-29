@@ -1,6 +1,6 @@
 "use client";
 // react
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 // styles
@@ -18,6 +18,13 @@ export default function LanguageSelect({
 }) {
 	const [menuLanguageOpen, setMenuLanguageOpen] = useState(false);
 	const { theme } = useTheme();
+
+	const [isMounted, setIsMounted] = useState(false);
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
+
+	if (!isMounted) return null;
 
 	const handleOpenMenuLanguage = () => {
 		setMenuLanguageOpen((prevMenuLanguageOpen) => !prevMenuLanguageOpen);
