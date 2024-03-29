@@ -18,17 +18,11 @@ import CardWork from "@/components/CardWork";
 import FormContact from "@/components/FormContact";
 import HeaderDesktop from "@/components/HeaderDesktop";
 
-const LanguageSelect = dynamic(() => import("@/components/LanguageSelect"), {
-	ssr: false,
-});
+const LanguageSelect = dynamic(() => import("@/components/LanguageSelect"));
 
-const ThemeSwitcher = dynamic(() => import("@/components/ThemeSwitcher"), {
-	ssr: false,
-});
+const ThemeSwitcher = dynamic(() => import("@/components/ThemeSwitcher"));
 
-const HeaderMobile = dynamic(() => import("@/components/HeaderMobile"), {
-	ssr: false,
-});
+const HeaderMobile = dynamic(() => import("@/components/HeaderMobile"));
 
 export default function Index() {
 	const t = useTranslations("IndexPage");
@@ -48,9 +42,18 @@ export default function Index() {
 				className=" absolute top-2 left-2 sm:hidden z-10"
 			/>
 			<div className="absolute top-2 right-5 sm:hidden z-10">
-				<LanguageSelect />
+				<LanguageSelect
+					englishTranslation={t("english")}
+					languageTranslation={t("language")}
+					spanishTranslation={t("spanish")}
+				/>
 			</div>
-			<HeaderDesktop classNameHeader=" hidden sm:flex place-self-center px-8" />
+			<HeaderDesktop
+				englishTranslation={t("english")}
+				languageTranslation={t("language")}
+				spanishTranslation={t("spanish")}
+				classNameHeader=" hidden sm:flex place-self-center px-8"
+			/>
 			<main className="w-full overflow-y-scroll flex flex-col gap-4 scroll-smooth">
 				<SectionGeneric
 					className="bg-light-blue-primary dark:bg-blue-primary h-screen flex-shrink-0 flex justify-center items-center flex-col md:flex-row md:gap-10"

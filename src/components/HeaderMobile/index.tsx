@@ -1,6 +1,6 @@
 "use client";
 // libs
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 // styles
 import styles from "./HeaderMobile.module.css";
@@ -24,6 +24,13 @@ interface MenuLink {
 export default function HeaderMobile({ className }: { className?: string }) {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const { theme } = useTheme();
+	const [isMounted, setIsMounted] = useState(false);
+
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
+
+	if (!isMounted) return null;
 
 	const components = {
 		SVGHome,

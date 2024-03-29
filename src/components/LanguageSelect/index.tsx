@@ -10,14 +10,23 @@ import styles from "./LanguageSelect.module.css";
 import SVGChevron from "../SVGChevron";
 import SVGGenericContainer from "../SVGGenericContainer";
 
+import { useRouter } from "next/navigation";
+
 export default function LanguageSelect({
 	className,
+	englishTranslation,
+	languageTranslation,
+	spanishTranslation,
 	...props
 }: {
 	className?: string;
+	englishTranslation: string;
+	languageTranslation: string;
+	spanishTranslation: string;
 }) {
 	const [menuLanguageOpen, setMenuLanguageOpen] = useState(false);
 	const { theme } = useTheme();
+	const router = useRouter();
 
 	const [isMounted, setIsMounted] = useState(false);
 	useEffect(() => {
@@ -31,8 +40,8 @@ export default function LanguageSelect({
 	};
 
 	const handleChangeLanguage = (e: React.MouseEvent<HTMLButtonElement>) => {
-		const language = (e.target as HTMLButtonElement).textContent;
-		console.log(language);
+		const language = (e.target as HTMLButtonElement).value;
+		router.replace(`/${language}`);
 	};
 
 	return (
@@ -42,7 +51,7 @@ export default function LanguageSelect({
 				value={menuLanguageOpen ? "Close" : "Open"}
 				className={`shadow-md rounded-md p-2 bg-light-blue-primary dark:bg-blue-primary flex justify-around items-center hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary`}
 			>
-				<span>Language</span>
+				<span>{languageTranslation}</span>
 				<SVGGenericContainer width="16px" height="16px">
 					<SVGChevron
 						color={theme === "dark" ? "white" : "black"}
@@ -57,10 +66,14 @@ export default function LanguageSelect({
 				}}
 			>
 				<li>
-					<button onClick={handleChangeLanguage}>English</button>
+					<button onClick={handleChangeLanguage} value="en">
+						{englishTranslation}
+					</button>
 				</li>
 				<li>
-					<button onClick={handleChangeLanguage}>Spanish</button>
+					<button onClick={handleChangeLanguage} value="es">
+						{spanishTranslation}
+					</button>
 				</li>
 			</ul>
 		</div>

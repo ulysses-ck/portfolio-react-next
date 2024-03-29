@@ -7,8 +7,14 @@ import LanguageSelect from "../LanguageSelect";
 
 export default function HeaderDesktop({
 	classNameHeader = "",
+	englishTranslation,
+	languageTranslation,
+	spanishTranslation,
 }: {
 	classNameHeader?: string;
+	englishTranslation: string;
+	languageTranslation: string;
+	spanishTranslation: string;
 }) {
 	const linksNav = [
 		{ href: "#home", label: "Home" },
@@ -35,7 +41,11 @@ export default function HeaderDesktop({
 					))}
 				</ul>
 			</nav>
-			<LanguageSelect />
+			<LanguageSelect
+				englishTranslation={englishTranslation}
+				languageTranslation={languageTranslation}
+				spanishTranslation={spanishTranslation}
+			/>
 			<ThemeSwitcher name="theme-switcher-desktop" />
 		</header>
 	);
