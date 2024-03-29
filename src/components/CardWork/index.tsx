@@ -36,7 +36,7 @@ export default function CardWork({
 						<SVGGenericContainer
 							width="45px"
 							height="45px"
-							className=" mix-blend-multiply"
+							className=" mix-blend-multiply dark:mix-blend-lighten"
 						>
 							<tech.Component color={tech.color}></tech.Component>
 						</SVGGenericContainer>
