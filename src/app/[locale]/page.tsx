@@ -56,7 +56,7 @@ export default function Index() {
 			/>
 			<main className="w-full overflow-y-scroll flex flex-col gap-4 scroll-smooth">
 				<SectionGeneric
-					className="bg-light-blue-primary dark:bg-blue-primary h-screen flex-shrink-0 flex justify-center items-center flex-col md:flex-row md:gap-10"
+					className="h-screen flex-shrink-0 flex justify-center items-center flex-col md:flex-row md:gap-10"
 					id="home"
 				>
 					<ImageContainer className="w-44 h-44 sm:w-80 sm:h-80">
@@ -74,7 +74,7 @@ export default function Index() {
 				</SectionGeneric>
 
 				<SectionGeneric
-					className="bg-light-blue-primary dark:bg-blue-primary min-h-screen flex-shrink-0 p-2 flex flex-col items-center justify-center gap-4"
+					className="min-h-screen flex-shrink-0 p-2 flex flex-col items-center justify-center gap-4"
 					id="about"
 				>
 					<h2 className="text-2xl font-bold">{t("titleAbout")}</h2>
@@ -86,7 +86,7 @@ export default function Index() {
 								<div
 									key={hardSkill.title}
 									title={hardSkill.title}
-									className="p-2 h-auto rounded-2xl shadow-md flex justify-center items-center hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary"
+									className="bg-light-blue-primary dark:bg-blue-primary p-2 h-auto rounded-2xl shadow-md flex justify-center items-center hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary"
 								>
 									<SVGGenericContainer width="70px" height="70px">
 										<Component color={hardSkill.color} />
