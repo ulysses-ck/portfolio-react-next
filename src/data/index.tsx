@@ -20,6 +20,7 @@ import SVGJest from "@/components/SVGJest";
 import SVGMongoDB from "@/components/SVGMongoDB";
 import SVGMySQL from "@/components/SVGMySQL";
 import SVGNetlify from "@/components/SVGNetlify";
+import SVGNext from "@/components/SVGNext";
 import SVGNodejs from "@/components/SVGNodejs";
 import SVGPlaywright from "@/components/SVGPlaywright";
 import SVGPostgreSQL from "@/components/SVGPostgreSQL";
@@ -41,44 +42,47 @@ import SVGVue from "@/components/SVGVue";
 // images
 import carlasfoodImage from "../../public/carlasfood.png";
 import dictappImage from "../../public/dictapp.png";
+import timeTrackingDashboardImage from "../../public/time-tracking-dashboard.png";
+import unboredImage from "../../public/unbored.png";
 
 export const hardSkills: HardSkill[] = [
-	{ title: "Angular", component: SVGAngular, color: "#c3002f" },
-	{ title: "AWS", component: SVGAWS, color: "" },
-	{ title: "CSS", component: SVGCSS, color: "#0068ba" },
-	{ title: "Debian", component: SVGDebian, color: "#d70751" },
-	{ title: "Docker", component: SVGDocker, color: "#0db7ed" },
-	{ title: "Eslint", component: SVGEslint, color: "#4b32c3" },
-	{ title: "Express.js", component: SVGExpress, color: "#000000" },
-	{ title: "Firebase", component: SVGFirebase, color: "#ffa308" },
-	{ title: "Git", component: SVGGit, color: "#f05639" },
-	{ title: "Go", component: SVGGolang, color: "#00add8" },
-	{ title: "Google Cloud Platform", component: SVGGoogleClod, color: "" },
-	{ title: "GraphQL", component: SVGGraphQL, color: "#e63bae" },
-	{ title: "HTML", component: SVGHTML, color: "#dd4b25" },
-	{ title: "Java", component: SVGJava, color: "#f89820" },
-	{ title: "JavaScript", component: SVGJavaScript, color: "#d8c000" },
-	{ title: "Jest", component: SVGJest, color: "#99425b" },
-	{ title: "MongoDB", component: SVGMongoDB, color: "#439934" },
-	{ title: "MySQL", component: SVGMySQL, color: "#00618a" },
-	{ title: "Netlify", component: SVGNetlify, color: "#00c7b7" },
-	{ title: "Node.js", component: SVGNodejs, color: "#63b84a" },
-	{ title: "Playwright", component: SVGPlaywright, color: "#f56d00" },
-	{ title: "PostgreSQL", component: SVGPostgreSQL, color: "#2f6792" },
-	{ title: "Prettier", component: SVGPrettier, color: "#f7b93e" },
-	{ title: "Pug", component: SVGPug, color: "#a86454" },
-	{ title: "Python", component: SVGPython, color: "#306998" },
-	{ title: "React.js", component: SVGReact, color: "#149eca" },
-	{ title: "Rust", component: SVGRust, color: "#000000" },
-	{ title: "Sanity", component: SVGSanity, color: "" },
-	{ title: "Shopify API", component: SVGShopify, color: "#7fba35" },
-	{ title: "Storybook", component: SVGStorybook, color: "#ff4785" },
-	{ title: "Supabase", component: SVGSupabase, color: "#6394f8" },
-	{ title: "Svelte", component: SVGSvelte, color: "#ff3e00" },
-	{ title: "Tailwind CSS", component: SVGTailwindCSS, color: "#42a9a8" },
-	{ title: "TypeScript", component: SVGTypescript, color: "#3178c6" },
-	{ title: "Vercel", component: SVGVercel, color: "#000000" },
-	{ title: "Vue", component: SVGVue, color: "" },
+	{ title: "Angular", Component: SVGAngular, color: "#c3002f" },
+	{ title: "AWS", Component: SVGAWS, color: "" },
+	{ title: "CSS", Component: SVGCSS, color: "#0068ba" },
+	{ title: "Debian", Component: SVGDebian, color: "#d70751" },
+	{ title: "Docker", Component: SVGDocker, color: "#0db7ed" },
+	{ title: "Eslint", Component: SVGEslint, color: "#4b32c3" },
+	{ title: "Express.js", Component: SVGExpress, color: "#000000" },
+	{ title: "Firebase", Component: SVGFirebase, color: "#ffa308" },
+	{ title: "Git", Component: SVGGit, color: "#f05639" },
+	{ title: "Go", Component: SVGGolang, color: "#00add8" },
+	{ title: "Google Cloud Platform", Component: SVGGoogleClod, color: "" },
+	{ title: "GraphQL", Component: SVGGraphQL, color: "#e63bae" },
+	{ title: "HTML", Component: SVGHTML, color: "#dd4b25" },
+	{ title: "Java", Component: SVGJava, color: "#f89820" },
+	{ title: "JavaScript", Component: SVGJavaScript, color: "#d8c000" },
+	{ title: "Jest", Component: SVGJest, color: "#99425b" },
+	{ title: "MongoDB", Component: SVGMongoDB, color: "#439934" },
+	{ title: "MySQL", Component: SVGMySQL, color: "#00618a" },
+	{ title: "Netlify", Component: SVGNetlify, color: "#00c7b7" },
+	{ title: "Node.js", Component: SVGNodejs, color: "#63b84a" },
+	{ title: "Playwright", Component: SVGPlaywright, color: "#f56d00" },
+	{ title: "PostgreSQL", Component: SVGPostgreSQL, color: "#2f6792" },
+	{ title: "Prettier", Component: SVGPrettier, color: "#f7b93e" },
+	{ title: "Pug", Component: SVGPug, color: "#a86454" },
+	{ title: "Python", Component: SVGPython, color: "#306998" },
+	{ title: "React.js", Component: SVGReact, color: "#149eca" },
+	{ title: "Rust", Component: SVGRust, color: "#000000" },
+	{ title: "Sanity", Component: SVGSanity, color: "" },
+	{ title: "Shopify API", Component: SVGShopify, color: "#7fba35" },
+	{ title: "Storybook", Component: SVGStorybook, color: "#ff4785" },
+	{ title: "Supabase", Component: SVGSupabase, color: "#6394f8" },
+	{ title: "Svelte", Component: SVGSvelte, color: "#ff3e00" },
+	{ title: "Tailwind CSS", Component: SVGTailwindCSS, color: "#42a9a8" },
+	{ title: "TypeScript", Component: SVGTypescript, color: "#3178c6" },
+	{ title: "Vercel", Component: SVGVercel, color: "#000000" },
+	{ title: "Vue", Component: SVGVue, color: "" },
+	{ title: "Next.js", Component: SVGNext, color: "#000000" },
 ];
 
 export const projects: ProjectWork[] = [
@@ -87,7 +91,6 @@ export const projects: ProjectWork[] = [
 		urlProject: "https://dictapp.netlify.app/",
 		imageProject: {
 			width: 900,
-
 			height: 900,
 			alt: "Dictionary App",
 			src: dictappImage.src,
@@ -96,18 +99,30 @@ export const projects: ProjectWork[] = [
 			{
 				title: "React.js",
 				color: "#149eca",
-				Component: () => <SVGReact color="#149eca" />,
+				Component: SVGReact,
 			},
 			{
 				title: "HTML",
 				color: "#dd4b25",
-				Component: () => <SVGHTML color="#dd4b25" />,
+				Component: SVGHTML,
 			},
 			{
 				title: "CSS",
 				color: "#0068ba",
-				Component: () => <SVGCSS color="#0068ba" />,
+				Component: SVGCSS,
 			},
+			{
+				title: "Git",
+				color: "#f05639",
+				Component: SVGGit,
+			},
+			{
+				title: "Netlify",
+				color: "#00c7b7",
+				Component: SVGNetlify,
+			},
+			{ title: "JavaScript", color: "#d8c000", Component: SVGJavaScript },
+			{ title: "Node.js", color: "#63b84a", Component: SVGNodejs },
 		],
 	},
 	{
@@ -115,7 +130,6 @@ export const projects: ProjectWork[] = [
 		urlProject: "https://github.com/ulysses-ck/carlasfood",
 		imageProject: {
 			width: 900,
-
 			height: 900,
 			alt: "Restaurant App page that shows a menu",
 			src: carlasfoodImage.src,
@@ -124,18 +138,97 @@ export const projects: ProjectWork[] = [
 			{
 				title: "Node.js",
 				color: "#63b84a",
-				Component: () => <SVGNodejs color="#63b84a" />,
+				Component: SVGNodejs,
 			},
 			{
 				title: "HTML",
 				color: "#dd4b25",
-				Component: () => <SVGHTML color="#dd4b25" />,
+				Component: SVGHTML,
 			},
 			{
 				title: "CSS",
 				color: "#0068ba",
-				Component: () => <SVGCSS color="#0068ba" />,
+				Component: SVGCSS,
 			},
+
+			{
+				title: "Pug",
+				color: "#a86454",
+				Component: SVGPug,
+			},
+			{ title: "Express.js", color: "#000000", Component: SVGExpress },
+			{ title: "JavaScript", color: "#d8c000", Component: SVGJavaScript },
+		],
+	},
+	{
+		titleProjectWork: "Time Tracking Dashboard",
+		urlProject: "http://time-tracking-dashboard-roan.vercel.app/",
+		imageProject: {
+			width: 900,
+			height: 900,
+			alt: "Time Tracking Dashboard",
+			src: timeTrackingDashboardImage.src,
+		},
+		techStack: [
+			{
+				title: "React.js",
+				color: "#149eca",
+				Component: SVGReact,
+			},
+			{
+				title: "HTML",
+				color: "#dd4b25",
+				Component: SVGHTML,
+			},
+			{
+				title: "CSS",
+				color: "#0068ba",
+				Component: SVGCSS,
+			},
+			{
+				title: "Vercel",
+				color: "#000000",
+				Component: SVGVercel,
+			},
+			{ title: "JavaScript", color: "#d8c000", Component: SVGJavaScript },
+			{ title: "Node.js", color: "#63b84a", Component: SVGNodejs },
+		],
+	},
+	{
+		titleProjectWork: "Unbored",
+		urlProject: "https://unbored.netlify.app/",
+		imageProject: {
+			width: 900,
+			height: 900,
+			alt: "Unbored App",
+			src: unboredImage.src,
+		},
+		techStack: [
+			{
+				title: "React.js",
+				color: "#149eca",
+				Component: SVGReact,
+			},
+			{
+				title: "HTML",
+				color: "#dd4b25",
+				Component: SVGHTML,
+			},
+			{
+				title: "CSS",
+				color: "#0068ba",
+				Component: SVGCSS,
+			},
+			{
+				title: "Netlify",
+				color: "#00c7b7",
+				Component: SVGNetlify,
+			},
+			{ title: "TypeScript", color: "#3178c6", Component: SVGTypescript },
+			{ title: "Prettier", color: "#f7b93e", Component: SVGPrettier },
+			{ title: "Eslint", color: "#4b32c3", Component: SVGEslint },
+			{ title: "Next.js", color: "#000000", Component: SVGNext },
+			{ title: "Node.js", color: "#63b84a", Component: SVGNodejs },
 		],
 	},
 ];

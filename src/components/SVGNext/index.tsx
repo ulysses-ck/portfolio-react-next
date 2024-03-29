@@ -2,6 +2,7 @@ export default function SVGNext() {
 	return (
 		<svg
 			fill="#000000"
+			className="bg-white p-2"
 			width="800px"
 			height="800px"
 			viewBox="0 0 24 24"

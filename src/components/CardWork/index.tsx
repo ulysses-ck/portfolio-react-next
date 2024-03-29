@@ -30,7 +30,7 @@ export default function CardWork({
 				</figure>
 			</a>
 			<h3 className="text-center text-xl">{projectWork.titleProjectWork}</h3>
-			<ul className="flex gap-2 justify-center p-4">
+			<ul className="flex gap-2 justify-center p-4 flex-wrap">
 				{projectWork.techStack.map((tech) => (
 					<li key={tech.title} title={tech.title}>
 						<SVGGenericContainer width="45px" height="45px">

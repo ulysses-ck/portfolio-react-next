@@ -1,19 +1,13 @@
-export interface HardSkill {
-	title: string;
-	component: React.FC<{ color: string }>;
-	color: string;
-}
-
 export interface ProjectWork {
 	imageProject: ImageProject;
 	titleProjectWork: string;
-	techStack: TechStack[];
+	techStack: HardSkill[];
 	urlProject?: string;
 }
 
-export interface TechStack {
-	Component: React.FC<{ color: string }>;
+export interface HardSkill {
 	title: string;
+	Component: React.FC<{ color: string }>;
 	color: string;
 }
 
