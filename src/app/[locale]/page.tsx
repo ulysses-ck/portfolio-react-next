@@ -19,6 +19,7 @@ import SVGGenericContainer from "@/components/SVGGenericContainer";
 import { hardSkills, projects } from "@/data";
 import CardWork from "@/components/CardWork";
 import FormContact from "@/components/FormContact";
+import HeaderDesktop from "@/components/HeaderDesktop";
 
 const LanguageSelect = dynamic(() => import("@/components/LanguageSelect"), {
 	ssr: false,
@@ -42,11 +43,14 @@ export default function Index() {
 
 	return (
 		<>
-			<HeaderMobile className=" self-end p-2" />
-			<ThemeSwitcher className=" absolute top-2 left-2" />
-			<div className="absolute top-2 right-5">
+			<div className="w-fit h-fit absolute bottom-2 left-5 block sm:hidden z-10">
+				<HeaderMobile className=" self-end p-2 sm:hidden" />
+			</div>
+			<ThemeSwitcher className=" absolute top-2 left-2 sm:hidden z-10" />
+			<div className="absolute top-2 right-5 sm:hidden z-10">
 				<LanguageSelect />
 			</div>
+			<HeaderDesktop classNameHeader=" hidden sm:flex place-self-center px-8" />
 			<main className="w-full overflow-y-scroll flex flex-col gap-4">
 				<SectionGeneric className="bg-light-blue-primary dark:bg-blue-primary h-lvh flex-shrink-0 flex justify-center items-center flex-col">
 					<ImageContainer width="180px" height="180px">
@@ -69,9 +73,10 @@ export default function Index() {
 							return (
 								<div
 									key={hardSkill.title}
-									className="w-[55px] p-2 h-auto rounded-2xl shadow-md flex justify-center items-center"
+									title={hardSkill.title}
+									className="p-2 h-auto rounded-2xl shadow-md flex justify-center items-center hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary"
 								>
-									<SVGGenericContainer width="35px" height="35px">
+									<SVGGenericContainer width="70px" height="70px">
 										<Component color={hardSkill.color} />
 									</SVGGenericContainer>
 								</div>
@@ -79,7 +84,7 @@ export default function Index() {
 						})}
 					</div>
 				</SectionGeneric>
-				<SectionGeneric className="flex flex-col min-h-lvh flex-shrink-0 items-center gap-6">
+				<SectionGeneric className="flex flex-col min-h-lvh flex-shrink-0 items-center gap-6 sm:px-24">
 					<h2>{t("titleWork")}</h2>
 					{projects.map((project) => (
 						<CardWork key={project.titleProjectWork} projectWork={project} />

@@ -8,7 +8,7 @@ export default function LocaleLayout({
 	params: { locale: string };
 }) {
 	return (
-		<html lang={locale}>
+		<html lang={locale} suppressHydrationWarning>
 			<body className="flex h-lvh overflow-hidden bg-light-blue-primary dark:bg-blue-primary">
 				<ThemeProvider attribute="class">{children}</ThemeProvider>
 			</body>

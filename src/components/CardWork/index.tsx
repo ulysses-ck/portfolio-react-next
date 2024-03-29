@@ -4,7 +4,6 @@ import { ProjectWork } from "@/data/interfaces";
 
 import SVGGenericContainer from "../SVGGenericContainer";
 import SVGOpenExternal from "../SVGOpenExternal";
-import ImageContainer from "../ImageContainer";
 
 export default function CardWork({
 	projectWork,
@@ -35,7 +34,7 @@ export default function CardWork({
 			<ul className="flex gap-2 justify-center p-4">
 				{projectWork.techStack.map((tech) => (
 					<li key={tech.title} title={tech.title}>
-						<SVGGenericContainer width="25px" height="25px">
+						<SVGGenericContainer width="45px" height="45px">
 							<tech.Component color={tech.color}></tech.Component>
 						</SVGGenericContainer>
 					</li>
