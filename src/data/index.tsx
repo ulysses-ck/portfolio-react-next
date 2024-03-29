@@ -44,6 +44,7 @@ import carlasfoodImage from "../../public/carlasfood.png";
 import dictappImage from "../../public/dictapp.png";
 import timeTrackingDashboardImage from "../../public/time-tracking-dashboard.png";
 import unboredImage from "../../public/unbored.png";
+import SVGTestingLibrary from "@/components/SVGTestingLibrary";
 
 export const hardSkills: HardSkill[] = [
 	{ title: "Angular", Component: SVGAngular, color: "#c3002f" },
@@ -78,6 +79,7 @@ export const hardSkills: HardSkill[] = [
 	{ title: "Storybook", Component: SVGStorybook, color: "#ff4785" },
 	{ title: "Supabase", Component: SVGSupabase, color: "#6394f8" },
 	{ title: "Svelte", Component: SVGSvelte, color: "#ff3e00" },
+	{ title: "Testing Library", Component: SVGTestingLibrary, color: "#f91f1e" },
 	{ title: "Tailwind CSS", Component: SVGTailwindCSS, color: "#42a9a8" },
 	{ title: "TypeScript", Component: SVGTypescript, color: "#3178c6" },
 	{ title: "Vercel", Component: SVGVercel, color: "#000000" },

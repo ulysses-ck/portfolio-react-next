@@ -33,7 +33,11 @@ export default function CardWork({
 			<ul className="flex gap-2 justify-center p-4 flex-wrap">
 				{projectWork.techStack.map((tech) => (
 					<li key={tech.title} title={tech.title}>
-						<SVGGenericContainer width="45px" height="45px">
+						<SVGGenericContainer
+							width="45px"
+							height="45px"
+							className=" mix-blend-multiply"
+						>
 							<tech.Component color={tech.color}></tech.Component>
 						</SVGGenericContainer>
 					</li>
