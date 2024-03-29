@@ -15,7 +15,12 @@ const meta = {
 export default meta;
 
 const Template: React.FC<{ className: string }> = (args) => (
-	<LanguageSelect {...args} />
+	<LanguageSelect
+		englishTranslation="English"
+		languageTranslation="Language"
+		spanishTranslation="Spanish"
+		{...args}
+	/>
 );
 
 export const Default: React.FC = (args) => (
