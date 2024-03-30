@@ -1,4 +1,4 @@
-import { HardSkill, ProjectWork } from "@/data/interfaces";
+import { HardSkills, ProjectWork } from "@/data/interfaces";
 
 // components
 import SVGAWS from "@/components/SVGAWS";
@@ -38,16 +38,16 @@ import SVGTailwindCSS from "@/components/SVGTailwindCSS";
 import SVGTypescript from "@/components/SVGTypeScript";
 import SVGVercel from "@/components/SVGVercel";
 import SVGVue from "@/components/SVGVue";
+import SVGTestingLibrary from "@/components/SVGTestingLibrary";
 
 // images
 import carlasfoodImage from "../../public/carlasfood.png";
 import dictappImage from "../../public/dictapp.png";
 import timeTrackingDashboardImage from "../../public/time-tracking-dashboard.png";
 import unboredImage from "../../public/unbored.png";
-import SVGTestingLibrary from "@/components/SVGTestingLibrary";
 
 // hashtable of a list of hardskills
-export const hardSkills: { [key: string]: HardSkill } = {
+export const hardSkills: HardSkills = {
 	Angular: { title: "Angular", Component: SVGAngular, color: "#c3002f" },
 	AWS: { title: "AWS", Component: SVGAWS, color: "" },
 	CSS: { title: "CSS", Component: SVGCSS, color: "#0068ba" },
@@ -120,7 +120,7 @@ export const hardSkills: { [key: string]: HardSkill } = {
 		color: "#3178c6",
 	},
 	Vercel: { title: "Vercel", Component: SVGVercel, color: "#000000" },
-	Vue: { title: "Vue", Component: SVGVue, color: "" },
+	"Vue.js": { title: "Vue", Component: SVGVue, color: "" },
 	"Next.js": { title: "Next.js", Component: SVGNext, color: "#000000" },
 };
 
@@ -135,33 +135,13 @@ export const projects: ProjectWork[] = [
 			src: dictappImage.src,
 		},
 		techStack: [
-			{
-				title: "React.js",
-				color: "#149eca",
-				Component: SVGReact,
-			},
-			{
-				title: "HTML",
-				color: "#dd4b25",
-				Component: SVGHTML,
-			},
-			{
-				title: "CSS",
-				color: "#0068ba",
-				Component: SVGCSS,
-			},
-			{
-				title: "Git",
-				color: "#f05639",
-				Component: SVGGit,
-			},
-			{
-				title: "Netlify",
-				color: "#00c7b7",
-				Component: SVGNetlify,
-			},
-			{ title: "JavaScript", color: "#d8c000", Component: SVGJavaScript },
-			{ title: "Node.js", color: "#63b84a", Component: SVGNodejs },
+			hardSkills["React.js"],
+			hardSkills["Git"],
+			hardSkills["HTML"],
+			hardSkills["CSS"],
+			hardSkills["Netlify"],
+			hardSkills["JavaScript"],
+			hardSkills["Node.js"],
 		],
 	},
 	{
@@ -174,29 +154,13 @@ export const projects: ProjectWork[] = [
 			src: carlasfoodImage.src,
 		},
 		techStack: [
-			{
-				title: "Node.js",
-				color: "#63b84a",
-				Component: SVGNodejs,
-			},
-			{
-				title: "HTML",
-				color: "#dd4b25",
-				Component: SVGHTML,
-			},
-			{
-				title: "CSS",
-				color: "#0068ba",
-				Component: SVGCSS,
-			},
-
-			{
-				title: "Pug",
-				color: "#a86454",
-				Component: SVGPug,
-			},
-			{ title: "Express.js", color: "#000000", Component: SVGExpress },
-			{ title: "JavaScript", color: "#d8c000", Component: SVGJavaScript },
+			hardSkills["Node.js"],
+			hardSkills["HTML"],
+			hardSkills["CSS"],
+			hardSkills["JavaScript"],
+			hardSkills["Git"],
+			hardSkills["Express.js"],
+			hardSkills["Pug"],
 		],
 	},
 	{
@@ -209,28 +173,12 @@ export const projects: ProjectWork[] = [
 			src: timeTrackingDashboardImage.src,
 		},
 		techStack: [
-			{
-				title: "React.js",
-				color: "#149eca",
-				Component: SVGReact,
-			},
-			{
-				title: "HTML",
-				color: "#dd4b25",
-				Component: SVGHTML,
-			},
-			{
-				title: "CSS",
-				color: "#0068ba",
-				Component: SVGCSS,
-			},
-			{
-				title: "Vercel",
-				color: "#000000",
-				Component: SVGVercel,
-			},
-			{ title: "JavaScript", color: "#d8c000", Component: SVGJavaScript },
-			{ title: "Node.js", color: "#63b84a", Component: SVGNodejs },
+			hardSkills["React.js"],
+			hardSkills["HTML"],
+			hardSkills["CSS"],
+			hardSkills["Vercel"],
+			hardSkills["JavaScript"],
+			hardSkills["Node.js"],
 		],
 	},
 	{
@@ -243,31 +191,15 @@ export const projects: ProjectWork[] = [
 			src: unboredImage.src,
 		},
 		techStack: [
-			{
-				title: "React.js",
-				color: "#149eca",
-				Component: SVGReact,
-			},
-			{
-				title: "HTML",
-				color: "#dd4b25",
-				Component: SVGHTML,
-			},
-			{
-				title: "CSS",
-				color: "#0068ba",
-				Component: SVGCSS,
-			},
-			{
-				title: "Netlify",
-				color: "#00c7b7",
-				Component: SVGNetlify,
-			},
-			{ title: "TypeScript", color: "#3178c6", Component: SVGTypescript },
-			{ title: "Prettier", color: "#f7b93e", Component: SVGPrettier },
-			{ title: "Eslint", color: "#4b32c3", Component: SVGEslint },
-			{ title: "Next.js", color: "#000000", Component: SVGNext },
-			{ title: "Node.js", color: "#63b84a", Component: SVGNodejs },
+			hardSkills["React.js"],
+			hardSkills["HTML"],
+			hardSkills["CSS"],
+			hardSkills["Netlify"],
+			hardSkills["TypeScript"],
+			hardSkills["Prettier"],
+			hardSkills["Eslint"],
+			hardSkills["Next.js"],
+			hardSkills["Node.js"],
 		],
 	},
 ];
