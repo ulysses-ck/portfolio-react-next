@@ -28,22 +28,22 @@ export const Primary: Story = {
 			},
 			techStack: [
 				{
-					title: "Tech Title",
+					title: "React.js",
 					color: "black",
 					Component: () => <SVGReact color="black" />,
 				},
 				{
-					title: "Tech Title",
+					title: "React.js",
 					color: "black",
 					Component: () => <SVGReact color="black" />,
 				},
 				{
-					title: "Tech Title",
+					title: "React.js",
 					color: "black",
 					Component: () => <SVGReact color="black" />,
 				},
 				{
-					title: "Tech Title",
+					title: "React.js",
 					color: "black",
 					Component: () => <SVGReact color="black" />,
 				},
