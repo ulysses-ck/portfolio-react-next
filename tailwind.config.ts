@@ -21,9 +21,11 @@ const config: Config = {
 				"blue-tertiary": "#3C40C6",
 
 				// light theme extend
-				"light-blue-primary": "#DAEDFC",
+				"light-blue-primary": "#D2DAE2",
 				"light-blue-secondary": "#E0E0E0",
 				"light-blue-tertiary": "#0BE881",
+
+				"yellow-accent-color": "#FFA801",
 			},
 			boxShadow: {
 				// dark theme extend

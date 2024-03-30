@@ -1,3 +1,5 @@
+import { ThemeProvider } from "next-themes";
+
 export default function LocaleLayout({
 	children,
 	params: { locale },
@@ -6,8 +8,10 @@ export default function LocaleLayout({
 	params: { locale: string };
 }) {
 	return (
-		<html lang={locale}>
-			<body>{children}</body>
+		<html lang={locale} suppressHydrationWarning>
+			<body className="flex h-screen overflow-hidden bg-light-blue-secondary dark:bg-blue-secondary">
+				<ThemeProvider attribute="class">{children}</ThemeProvider>
+			</body>
 		</html>
 	);
 }
