@@ -6,12 +6,12 @@ export interface ProjectWork {
 }
 
 export interface HardSkill {
-	title: string;
+	title: TechStack;
 	Component: React.FC<{ color: string }>;
 	color: string;
 }
 
-type TechStack =
+export type TechStack =
 	| "Angular"
 	| "AWS"
 	| "CSS"
