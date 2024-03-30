@@ -80,17 +80,20 @@ export default function Index() {
 					<h2 className="text-2xl font-bold">{t("titleAbout")}</h2>
 					<p className="px-8 sm:px-24">{t("descriptionAbout")}</p>
 					<div className="grid grid-cols-3 gap-7 sm:flex sm:flex-wrap sm:justify-center sm:px-10 md:px-24">
-						{hardSkills.map((hardSkill) => (
-							<div
-								key={hardSkill.title}
-								title={hardSkill.title}
-								className="bg-light-blue-primary dark:bg-blue-primary p-2 h-auto rounded-2xl shadow-md flex justify-center items-center hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary"
-							>
-								<SVGGenericContainer className=" w-[70px] h-[70px] rounded-2xl mix-blend-multiply dark:mix-blend-lighten overflow-clip">
-									<hardSkill.Component color={hardSkill.color} />
-								</SVGGenericContainer>
-							</div>
-						))}
+						{Object.keys(hardSkills).map((hardSkill: string) => {
+							const Component = hardSkills[hardSkill].Component;
+							return (
+								<div
+									key={hardSkills[hardSkill].title}
+									title={hardSkills[hardSkill].title}
+									className="bg-light-blue-primary dark:bg-blue-primary p-2 h-auto rounded-2xl shadow-md flex justify-center items-center hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary"
+								>
+									<SVGGenericContainer className=" w-[70px] h-[70px] rounded-2xl mix-blend-multiply dark:mix-blend-lighten overflow-clip">
+										<Component color={hardSkills[hardSkill].color}></Component>
+									</SVGGenericContainer>
+								</div>
+							);
+						})}
 					</div>
 				</SectionGeneric>
 				<SectionGeneric
