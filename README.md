@@ -4,19 +4,20 @@ This repository is about my personal portfolio
 
 ## Stack
 
-- [React](https://react.dev/)
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://typescriptlang.org/)
-- [Prettier](https://prettier.io/)
-- [ESLint](https://eslint.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Storybook](https://storybook.js.org/)
-- [Jest](https://jestjs.io/)
-- [Testing Library](https://testing-library.com/)
-- [Axe](https://www.deque.com/axe/)
-- [Husky](https://typicode.github.io/husky/)
-- [commitlint](https://commitlint.js.org/)
-- [next-themes](https://github.com/pacocoursey/next-themes/)
+- [React](https://react.dev/) - UI components
+- [Next.js](https://nextjs.org/) - React Framework
+- [TypeScript](https://typescriptlang.org/) - Programming Language
+- [Prettier](https://prettier.io/) - Formatting tool
+- [ESLint](https://eslint.org/) - Linting tool
+- [Tailwind CSS](https://tailwindcss.com/) - Class utility Framework
+- [Storybook](https://storybook.js.org/) - Isolation Development UI Components
+- [Jest](https://jestjs.io/) - Unit tests
+- [Testing Library](https://testing-library.com/) - Testing react
+- [Axe](https://www.deque.com/axe/) - Testing accesibilty
+- [Husky](https://typicode.github.io/husky/) - Tool for handle hooks of git
+- [commitlint](https://commitlint.js.org/) - Lint commit messages
+- [next-themes](https://github.com/pacocoursey/next-themes/) - Library to support dark mode easily
+- [Playwright](https://playwright.dev/) - End to end (e2e) testing
 
 ## Get Started
 
@@ -51,4 +52,22 @@ And formatting, use:
 
 ```sh
 npm run format
+```
+
+Storybook server
+
+```sh
+npm run storybook
+```
+
+Run all unit tests
+
+```sh
+npm run test:jest
+```
+
+Run all e2e tests
+
+```sh
+npm run test:playwright
 ```

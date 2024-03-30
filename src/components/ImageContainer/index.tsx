@@ -1,7 +1,23 @@
-export default function ImageContainer() {
+export default function ImageContainer({
+	width = "",
+	height = "",
+	children,
+	className = "",
+}: {
+	width?: string;
+	height?: string;
+	children: React.ReactNode;
+	className?: string;
+}) {
 	return (
-		<div>
-			<img src="#" alt="Some fancy description example" />
+		<div
+			{...{ className }}
+			style={{
+				width,
+				height,
+			}}
+		>
+			{children}
 		</div>
 	);
 }
