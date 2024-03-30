@@ -86,7 +86,7 @@ export default function Index() {
 								<div
 									key={hardSkill.title}
 									title={hardSkill.title}
-									className="bg-light-blue-primary dark:bg-blue-primary p-2 h-auto rounded-2xl shadow-md flex justify-center items-center hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary mix-blend-multiply hover:mix-blend-normal"
+									className="bg-light-blue-primary dark:bg-blue-primary p-2 h-auto rounded-2xl shadow-md flex justify-center items-center hover:shadow-outer-shadow-primary-two hover:bg-light-blue-tertiary hover:dark:bg-blue-tertiary hover:dark:shadow-outer-shadow-primary mix-blend-multiply dark:mix-blend-normal hover:mix-blend-normal"
 								>
 									<SVGGenericContainer className=" w-[70px] h-[70px] rounded-2xl dark:mix-blend-lighten overflow-clip">
 										<Component color={hardSkill.color}></Component>
