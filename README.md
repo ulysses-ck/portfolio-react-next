@@ -2,9 +2,6 @@
 
 This repository is about my personal portfolio
 
-## Demo
-![chrome_RAhnxEcKij](https://github.com/ulysses-ck/portfolio-react-next/assets/50756389/4e44f20d-2b6f-4f05-af9e-96f2dc9a43d9)
-
 ## Stack
 
 - [React](https://react.dev/) - UI components
