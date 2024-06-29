@@ -12,7 +12,6 @@ const meta = {
 	argTypes: {
 		width: { control: "text" },
 		height: { control: "text" },
-		children: { control: "none" },
 	},
 } satisfies Meta<typeof SVGGenericContainer>;
 
