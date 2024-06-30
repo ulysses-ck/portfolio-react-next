@@ -1,44 +1,6 @@
 import { HardSkills, ProjectWork } from "@/data/interfaces";
 
 // components
-import SVGAWS from "@/components/SVGAWS";
-import SVGAngular from "@/components/SVGAngular";
-import SVGCSS from "@/components/SVGCSS";
-import SVGDebian from "@/components/SVGDebian";
-import SVGDocker from "@/components/SVGDocker";
-import SVGEslint from "@/components/SVGEslint";
-import SVGExpress from "@/components/SVGExpress";
-import SVGFirebase from "@/components/SVGFirebase";
-import SVGGit from "@/components/SVGGit";
-import SVGGolang from "@/components/SVGGolang";
-import SVGGoogleClod from "@/components/SVGGoogleCloud";
-import SVGGraphQL from "@/components/SVGGraphQL";
-import SVGHTML from "@/components/SVGHTML";
-import SVGJava from "@/components/SVGJava";
-import SVGJavaScript from "@/components/SVGJavaScript";
-import SVGJest from "@/components/SVGJest";
-import SVGMongoDB from "@/components/SVGMongoDB";
-import SVGMySQL from "@/components/SVGMySQL";
-import SVGNetlify from "@/components/SVGNetlify";
-import SVGNext from "@/components/SVGNext";
-import SVGNodejs from "@/components/SVGNodejs";
-import SVGPlaywright from "@/components/SVGPlaywright";
-import SVGPostgreSQL from "@/components/SVGPostgreSQL";
-import SVGPrettier from "@/components/SVGPrettier";
-import SVGPug from "@/components/SVGPug";
-import SVGPython from "@/components/SVGPython";
-import SVGReact from "@/components/SVGReact";
-import SVGRust from "@/components/SVGRust";
-import SVGSanity from "@/components/SVGSanity";
-import SVGShopify from "@/components/SVGShopify";
-import SVGStorybook from "@/components/SVGStorybook";
-import SVGSupabase from "@/components/SVGSupabase";
-import SVGSvelte from "@/components/SVGSvelte";
-import SVGTailwindCSS from "@/components/SVGTailwindCSS";
-import SVGTypescript from "@/components/SVGTypeScript";
-import SVGVercel from "@/components/SVGVercel";
-import SVGVue from "@/components/SVGVue";
-import SVGTestingLibrary from "@/components/SVGTestingLibrary";
 import {
 	FaAngular,
 	FaAws,
