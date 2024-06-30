@@ -39,6 +39,47 @@ import SVGTypescript from "@/components/SVGTypeScript";
 import SVGVercel from "@/components/SVGVercel";
 import SVGVue from "@/components/SVGVue";
 import SVGTestingLibrary from "@/components/SVGTestingLibrary";
+import {
+	FaAngular,
+	FaAws,
+	FaCss3Alt,
+	FaDocker,
+	FaGit,
+	FaHtml5,
+	FaJava,
+	FaNode,
+	FaPython,
+	FaReact,
+	FaRust,
+	FaShopify,
+	FaVuejs,
+} from "react-icons/fa";
+import { FcDebian } from "react-icons/fc";
+import {
+	SiEslint,
+	SiExpress,
+	SiGooglecloud,
+	SiJavascript,
+	SiJest,
+	SiMongodb,
+	SiMysql,
+	SiNextdotjs,
+	SiPlaywright,
+	SiPrettier,
+	SiPug,
+	SiSanity,
+	SiStorybook,
+	SiSupabase,
+	SiSvelte,
+	SiTestinglibrary,
+	SiTypescript,
+	SiVercel,
+} from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
+import { FaGolang } from "react-icons/fa6";
+import { GrGraphQl } from "react-icons/gr";
+import { BiLogoNetlify, BiLogoPostgresql } from "react-icons/bi";
+import { RiTailwindCssLine } from "react-icons/ri";
 
 // images
 import carlasfoodImage from "../../public/carlasfood.png";
@@ -56,80 +97,80 @@ import reactExpressDymamoDBImage from "../../public/react-express-dynamodb.png";
 
 // hashtable of a list of hardskills
 export const hardSkills: HardSkills = {
-	Angular: { title: "Angular", Component: SVGAngular, color: "#c3002f" },
-	AWS: { title: "AWS", Component: SVGAWS, color: "" },
-	CSS: { title: "CSS", Component: SVGCSS, color: "#0068ba" },
-	Debian: { title: "Debian", Component: SVGDebian, color: "#a80030" },
-	Docker: { title: "Docker", Component: SVGDocker, color: "#0db7ed" },
-	Eslint: { title: "Eslint", Component: SVGEslint, color: "#4b32c3" },
+	Angular: { title: "Angular", Component: FaAngular, color: "#c3002f" },
+	AWS: { title: "AWS", Component: FaAws, color: "" },
+	CSS: { title: "CSS", Component: FaCss3Alt, color: "#0068ba" },
+	Debian: { title: "Debian", Component: FcDebian, color: "#a80030" },
+	Docker: { title: "Docker", Component: FaDocker, color: "#0db7ed" },
+	Eslint: { title: "Eslint", Component: SiEslint, color: "#4b32c3" },
 	"Express.js": {
 		title: "Express.js",
-		Component: SVGExpress,
+		Component: SiExpress,
 		color: "#000000",
 	},
-	Firebase: { title: "Firebase", Component: SVGFirebase, color: "#ffa308" },
-	Git: { title: "Git", Component: SVGGit, color: "#f05639" },
-	Go: { title: "Go", Component: SVGGolang, color: "#00add8" },
+	Firebase: { title: "Firebase", Component: IoLogoFirebase, color: "#ffa308" },
+	Git: { title: "Git", Component: FaGit, color: "#f05639" },
+	Go: { title: "Go", Component: FaGolang, color: "#00add8" },
 	"Google Cloud Platform": {
 		title: "Google Cloud Platform",
-		Component: SVGGoogleClod,
+		Component: SiGooglecloud,
 		color: "",
 	},
-	GraphQL: { title: "GraphQL", Component: SVGGraphQL, color: "#e63bae" },
-	HTML: { title: "HTML", Component: SVGHTML, color: "#dd4b25" },
-	Java: { title: "Java", Component: SVGJava, color: "#f89820" },
+	GraphQL: { title: "GraphQL", Component: GrGraphQl, color: "#e63bae" },
+	HTML: { title: "HTML", Component: FaHtml5, color: "#dd4b25" },
+	Java: { title: "Java", Component: FaJava, color: "#f89820" },
 	JavaScript: {
 		title: "JavaScript",
-		Component: SVGJavaScript,
+		Component: SiJavascript,
 		color: "#d8c000",
 	},
-	Jest: { title: "Jest", Component: SVGJest, color: "#99425b" },
-	MongoDB: { title: "MongoDB", Component: SVGMongoDB, color: "#439934" },
-	MySQL: { title: "MySQL", Component: SVGMySQL, color: "#00618a" },
-	Netlify: { title: "Netlify", Component: SVGNetlify, color: "#00c7b7" },
-	"Node.js": { title: "Node.js", Component: SVGNodejs, color: "#63b84a" },
+	Jest: { title: "Jest", Component: SiJest, color: "#99425b" },
+	MongoDB: { title: "MongoDB", Component: SiMongodb, color: "#439934" },
+	MySQL: { title: "MySQL", Component: SiMysql, color: "#00618a" },
+	Netlify: { title: "Netlify", Component: BiLogoNetlify, color: "#00c7b7" },
+	"Node.js": { title: "Node.js", Component: FaNode, color: "#63b84a" },
 	Playwright: {
 		title: "Playwright",
-		Component: SVGPlaywright,
+		Component: SiPlaywright,
 		color: "#f56d00",
 	},
 	PostgreSQL: {
 		title: "PostgreSQL",
-		Component: SVGPostgreSQL,
+		Component: BiLogoPostgresql,
 		color: "#2f6792",
 	},
-	Prettier: { title: "Prettier", Component: SVGPrettier, color: "#f7b93e" },
-	Pug: { title: "Pug", Component: SVGPug, color: "#a86454" },
-	Python: { title: "Python", Component: SVGPython, color: "#306998" },
-	"React.js": { title: "React.js", Component: SVGReact, color: "#149eca" },
-	Rust: { title: "Rust", Component: SVGRust, color: "#000000" },
-	Sanity: { title: "Sanity", Component: SVGSanity, color: "" },
+	Prettier: { title: "Prettier", Component: SiPrettier, color: "#f7b93e" },
+	Pug: { title: "Pug", Component: SiPug, color: "#a86454" },
+	Python: { title: "Python", Component: FaPython, color: "#306998" },
+	"React.js": { title: "React.js", Component: FaReact, color: "#149eca" },
+	Rust: { title: "Rust", Component: FaRust, color: "#000000" },
+	Sanity: { title: "Sanity", Component: SiSanity, color: "" },
 	"Shopify API": {
 		title: "Shopify API",
-		Component: SVGShopify,
+		Component: FaShopify,
 		color: "#7fba35",
 	},
-	Storybook: { title: "Storybook", Component: SVGStorybook, color: "#ff4785" },
-	Supabase: { title: "Supabase", Component: SVGSupabase, color: "#6394f8" },
-	Svelte: { title: "Svelte", Component: SVGSvelte, color: "#ff3e00" },
+	Storybook: { title: "Storybook", Component: SiStorybook, color: "#ff4785" },
+	Supabase: { title: "Supabase", Component: SiSupabase, color: "#6394f8" },
+	Svelte: { title: "Svelte", Component: SiSvelte, color: "#ff3e00" },
 	"Testing Library": {
 		title: "Testing Library",
-		Component: SVGTestingLibrary,
+		Component: SiTestinglibrary,
 		color: "#f91f1e",
 	},
 	"Tailwind CSS": {
 		title: "Tailwind CSS",
-		Component: SVGTailwindCSS,
+		Component: RiTailwindCssLine,
 		color: "#42a9a8",
 	},
 	TypeScript: {
 		title: "TypeScript",
-		Component: SVGTypescript,
+		Component: SiTypescript,
 		color: "#3178c6",
 	},
-	Vercel: { title: "Vercel", Component: SVGVercel, color: "#000000" },
-	"Vue.js": { title: "Vue.js", Component: SVGVue, color: "" },
-	"Next.js": { title: "Next.js", Component: SVGNext, color: "#000000" },
+	Vercel: { title: "Vercel", Component: SiVercel, color: "#000000" },
+	"Vue.js": { title: "Vue.js", Component: FaVuejs, color: "" },
+	"Next.js": { title: "Next.js", Component: SiNextdotjs, color: "#000000" },
 };
 
 export const projects: ProjectWork[] = [
