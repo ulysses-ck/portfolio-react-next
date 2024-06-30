@@ -3,8 +3,6 @@ import { useTheme } from "next-themes";
 import SVGGenericContainer from "../SVGGenericContainer";
 import { FaMoon } from "react-icons/fa";
 import { LuSun } from "react-icons/lu";
-import SVGSun from "../SVGSun";
-import SVGMoon from "../SVGMoon";
 import { useEffect, useState } from "react";
 
 export default function ThemeSwitcher({
