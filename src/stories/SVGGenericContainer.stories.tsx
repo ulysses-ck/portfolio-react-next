@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import SVGGenericContainer from "../components/SVGGenericContainer";
-import SVGSun from "../components/SVGSun";
+import { FaSun } from "react-icons/fa";
 
 const meta = {
 	title: "SVGGenericContainer",
@@ -22,6 +22,6 @@ export const Primary: Story = {
 	args: {
 		width: "100px",
 		height: "100px",
-		children: <SVGSun color="#f00" />,
+		children: <FaSun color="#f00" />,
 	},
 };
