@@ -76,7 +76,7 @@ export const hardSkills: HardSkills = {
 	"Google Cloud Platform": {
 		title: "Google Cloud Platform",
 		Component: SiGooglecloud,
-		color: "",
+		color: "#1a0afa",
 	},
 	GraphQL: { title: "GraphQL", Component: GrGraphQl, color: "#e63bae" },
 	HTML: { title: "HTML", Component: FaHtml5, color: "#dd4b25" },
@@ -105,15 +105,15 @@ export const hardSkills: HardSkills = {
 	Pug: { title: "Pug", Component: SiPug, color: "#a86454" },
 	Python: { title: "Python", Component: FaPython, color: "#306998" },
 	"React.js": { title: "React.js", Component: FaReact, color: "#149eca" },
-	Rust: { title: "Rust", Component: FaRust, color: "#000000" },
-	Sanity: { title: "Sanity", Component: SiSanity, color: "" },
+	Rust: { title: "Rust", Component: FaRust, color: "#bb6454" },
+	Sanity: { title: "Sanity", Component: SiSanity, color: "#f36458" },
 	"Shopify API": {
 		title: "Shopify API",
 		Component: FaShopify,
 		color: "#7fba35",
 	},
 	Storybook: { title: "Storybook", Component: SiStorybook, color: "#ff4785" },
-	Supabase: { title: "Supabase", Component: SiSupabase, color: "#6394f8" },
+	Supabase: { title: "Supabase", Component: SiSupabase, color: "#fa66f0" },
 	Svelte: { title: "Svelte", Component: SiSvelte, color: "#ff3e00" },
 	"Testing Library": {
 		title: "Testing Library",
@@ -131,7 +131,7 @@ export const hardSkills: HardSkills = {
 		color: "#3178c6",
 	},
 	Vercel: { title: "Vercel", Component: SiVercel, color: "#000000" },
-	"Vue.js": { title: "Vue.js", Component: FaVuejs, color: "" },
+	"Vue.js": { title: "Vue.js", Component: FaVuejs, color: "#41b883" },
 	"Next.js": { title: "Next.js", Component: SiNextdotjs, color: "#000000" },
 };
 
