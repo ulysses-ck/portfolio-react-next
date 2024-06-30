@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import CardWork from "../components/CardWork";
-import SVGReact from "../components/SVGReact";
+import { FaReact } from "react-icons/fa";
 
 const meta = {
 	title: "CardWork",
@@ -30,22 +30,22 @@ export const Primary: Story = {
 				{
 					title: "React.js",
 					color: "black",
-					Component: () => <SVGReact color="black" />,
+					Component: () => <FaReact color="black" />,
 				},
 				{
 					title: "React.js",
 					color: "black",
-					Component: () => <SVGReact color="black" />,
+					Component: () => <FaReact color="black" />,
 				},
 				{
 					title: "React.js",
 					color: "black",
-					Component: () => <SVGReact color="black" />,
+					Component: () => <FaReact color="black" />,
 				},
 				{
 					title: "React.js",
 					color: "black",
-					Component: () => <SVGReact color="black" />,
+					Component: () => <FaReact color="black" />,
 				},
 			],
 		},

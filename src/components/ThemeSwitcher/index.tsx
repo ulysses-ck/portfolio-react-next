@@ -1,8 +1,8 @@
 "use client";
 import { useTheme } from "next-themes";
 import SVGGenericContainer from "../SVGGenericContainer";
-import SVGSun from "../SVGSun";
-import SVGMoon from "../SVGMoon";
+import { FaMoon } from "react-icons/fa";
+import { LuSun } from "react-icons/lu";
 import { useEffect, useState } from "react";
 
 export default function ThemeSwitcher({
@@ -33,7 +33,11 @@ export default function ThemeSwitcher({
 			onClick={handleChangeTheme}
 		>
 			<SVGGenericContainer width="50px" height="50px">
-				{theme !== "light" ? <SVGMoon color="#fff" /> : <SVGSun color="#000" />}
+				{theme !== "light" ? (
+					<LuSun color="#ffffff" fill="#ffffff00" />
+				) : (
+					<FaMoon fill="#000000" />
+				)}
 			</SVGGenericContainer>
 		</button>
 	);

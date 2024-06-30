@@ -6,13 +6,11 @@ import { useTheme } from "next-themes";
 import styles from "./HeaderMobile.module.css";
 
 // components
-import SVGHome from "../SVGHome";
-import SVGResume from "../SVGResume";
-import SVGWork from "../SVGWork";
-import SVGSendEmail from "../SVGSendEmail";
-import SVGBars from "../SVGBars";
-import SVGCross from "../SVGCross";
 import SVGGenericContainer from "../SVGGenericContainer";
+import { IoMdHome, IoMdPaper } from "react-icons/io";
+import { MdOutlineEmail, MdOutlineWork } from "react-icons/md";
+import { ImCross } from "react-icons/im";
+import { FaBars } from "react-icons/fa";
 
 interface MenuLink {
 	name: string;
@@ -33,32 +31,32 @@ export default function HeaderMobile({ className }: { className?: string }) {
 	if (!isMounted) return null;
 
 	const components = {
-		SVGHome,
-		SVGResume,
-		SVGWork,
-		SVGSendEmail,
+		IoMdHome,
+		IoMdPaper,
+		MdOutlineWork,
+		MdOutlineEmail,
 	};
 
 	const menu: MenuLink[] = [
 		{
 			name: "Home",
 			href: "#home",
-			Icon: components.SVGHome,
+			Icon: components.IoMdHome,
 		},
 		{
 			name: "About",
 			href: "#about",
-			Icon: components.SVGResume,
+			Icon: components.IoMdPaper,
 		},
 		{
 			name: "Work",
 			href: "#work",
-			Icon: components.SVGWork,
+			Icon: components.MdOutlineWork,
 		},
 		{
 			name: "Contact",
 			href: "#contact",
-			Icon: components.SVGSendEmail,
+			Icon: components.MdOutlineEmail,
 		},
 	];
 
@@ -96,11 +94,11 @@ export default function HeaderMobile({ className }: { className?: string }) {
 			>
 				{menuOpen ? (
 					<SVGGenericContainer width={"25px"} height={"25px"}>
-						<SVGCross color={theme === "light" ? "#000" : "#fff"} />
+						<ImCross color={theme === "light" ? "#000" : "#fff"} />
 					</SVGGenericContainer>
 				) : (
 					<SVGGenericContainer width={"25px"} height={"25px"}>
-						<SVGBars color={theme === "light" ? "#000" : "#fff"} />
+						<FaBars color={theme === "light" ? "#000" : "#fff"} />
 					</SVGGenericContainer>
 				)}
 			</button>

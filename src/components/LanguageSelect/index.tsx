@@ -7,10 +7,10 @@ import { useTheme } from "next-themes";
 import styles from "./LanguageSelect.module.css";
 
 // Components
-import SVGChevron from "../SVGChevron";
 import SVGGenericContainer from "../SVGGenericContainer";
 
 import { useRouter } from "next/navigation";
+import { FaChevronDown, FaChevronLeft } from "react-icons/fa";
 
 export default function LanguageSelect({
 	className,
@@ -53,10 +53,11 @@ export default function LanguageSelect({
 			>
 				<span>{languageTranslation}</span>
 				<SVGGenericContainer width="16px" height="16px">
-					<SVGChevron
-						color={theme === "dark" ? "white" : "black"}
-						degree={menuLanguageOpen ? 0 : 90}
-					/>
+					{menuLanguageOpen ? (
+						<FaChevronDown color={theme === "dark" ? "#ffffff" : "#000000"} />
+					) : (
+						<FaChevronLeft color={theme === "dark" ? "#ffffff" : "#000000"} />
+					)}
 				</SVGGenericContainer>
 			</button>
 			<ul
