@@ -26,12 +26,6 @@ const HeaderMobile = dynamic(() => import("@/components/HeaderMobile"));
 
 export default function Index() {
 	const t = useTranslations("IndexPage");
-
-	async function sendMessage(formData: FormData) {
-		"use server";
-		console.log(formData);
-	}
-
 	return (
 		<>
 			<div className="w-fit h-fit absolute bottom-2 left-5 block sm:hidden z-10">
@@ -110,7 +104,7 @@ export default function Index() {
 					id="contact"
 				>
 					<h2 className="text-2xl font-bold">{t("titleContact")}</h2>
-					<FormContact sendMessage={sendMessage}></FormContact>
+					<a href="mailto:ulisesapaza.280@gmail.com">ulisesapaza.280@gmail.com</a>
 				</SectionGeneric>
 			</main>
 		</>
