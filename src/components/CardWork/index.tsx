@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ProjectWork } from "@/data/interfaces";
 
 import SVGGenericContainer from "../SVGGenericContainer";
-import SVGOpenExternal from "../SVGOpenExternal";
+import { FaShareSquare } from "react-icons/fa";
 
 export default function CardWork({
 	projectWork,
@@ -16,7 +16,7 @@ export default function CardWork({
 				<figure className="relative rounded-t-2xl">
 					<span className="w-[30px] h-[30px] absolute top-0 right-0 flex justify-center items-center bg-yellow-accent-color rounded-tr-2xl">
 						<SVGGenericContainer width="15px" height="15px">
-							<SVGOpenExternal color="black"></SVGOpenExternal>
+							<FaShareSquare color="black"></FaShareSquare>
 						</SVGGenericContainer>
 					</span>
 					<Image
