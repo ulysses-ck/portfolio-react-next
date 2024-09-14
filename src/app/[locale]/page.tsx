@@ -104,7 +104,9 @@ export default function Index() {
 					id="contact"
 				>
 					<h2 className="text-2xl font-bold">{t("titleContact")}</h2>
-					<a href="mailto:ulisesapaza.280@gmail.com">ulisesapaza.280@gmail.com</a>
+					<a href="mailto:ulisesapaza.280@gmail.com">
+						ulisesapaza.280@gmail.com
+					</a>
 				</SectionGeneric>
 			</main>
 		</>
