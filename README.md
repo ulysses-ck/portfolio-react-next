@@ -1,76 +1,36 @@
-# Portfolio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This repository is about my personal portfolio
+## Getting Started
 
-## Demo
-![chrome_RAhnxEcKij](https://github.com/ulysses-ck/portfolio-react-next/assets/50756389/4e44f20d-2b6f-4f05-af9e-96f2dc9a43d9)
-
-## Stack
-
-- [React](https://react.dev/) - UI components
-- [Next.js](https://nextjs.org/) - React Framework
-- [TypeScript](https://typescriptlang.org/) - Programming Language
-- [Prettier](https://prettier.io/) - Formatting tool
-- [ESLint](https://eslint.org/) - Linting tool
-- [Tailwind CSS](https://tailwindcss.com/) - Class utility Framework
-- [Storybook](https://storybook.js.org/) - Isolation Development UI Components
-- [Jest](https://jestjs.io/) - Unit tests
-- [Testing Library](https://testing-library.com/) - Testing react
-- [Axe](https://www.deque.com/axe/) - Testing accesibilty
-- [Husky](https://typicode.github.io/husky/) - Tool for handle hooks of git
-- [commitlint](https://commitlint.js.org/) - Lint commit messages
-- [next-themes](https://github.com/pacocoursey/next-themes/) - Library to support dark mode easily
-- [Playwright](https://playwright.dev/) - End to end (e2e) testing
-
-## Get Started
-
-Clone repo
-
-```
-git clone https://github.com/ulysses-ck/portfolio-react-next
-```
-
-Install dependencies
-
-```sh
-npm install
-```
-
-Start development server.
+First, run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-By default, the server listen at:
-[http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-For linting, use:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```sh
-npm run lint
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-And formatting, use:
+## Learn More
 
-```sh
-npm run format
-```
+To learn more about Next.js, take a look at the following resources:
 
-Storybook server
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```sh
-npm run storybook
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Run all unit tests
+## Deploy on Vercel
 
-```sh
-npm run test:jest
-```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Run all e2e tests
-
-```sh
-npm run test:playwright
-```
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
