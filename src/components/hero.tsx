@@ -1,5 +1,6 @@
 "use client";
 
+import { SOCIAL_MEDIA } from "@/data/profile";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
@@ -62,7 +63,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <span className="block text-foreground">Hi, I'm</span>
-          <span className="text-gradient">Alex Chen</span>
+          <span className="text-gradient">Ulises</span>
         </motion.h1>
 
         <motion.p
@@ -83,9 +84,9 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           {[
-            { icon: Github, href: "#", label: "GitHub" },
-            { icon: Linkedin, href: "#", label: "LinkedIn" },
-            { icon: Mail, href: "#contact", label: "Email" },
+            { icon: Github, href: SOCIAL_MEDIA["GitHub"], label: "GitHub" },
+            { icon: Linkedin, href: SOCIAL_MEDIA["LinkedIn"], label: "LinkedIn" },
+            { icon: Mail, href: SOCIAL_MEDIA["Email"], label: "Email" },
           ].map(({ icon: Icon, href, label }) => (
             <motion.a
               key={label}

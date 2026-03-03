@@ -1,5 +1,6 @@
 "use client";
 
+import { SOCIAL_MEDIA } from "@/data/profile";
 import { motion } from "framer-motion";
 import { Send, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
@@ -99,10 +100,10 @@ const Contact = () => {
 
             {/* Quick links */}
             <div className="flex flex-wrap gap-3 pt-4">
-              {["LinkedIn", "GitHub", "Twitter"].map((platform) => (
+              {Object.entries(SOCIAL_MEDIA).map(([platform, link]) => (
                 <motion.a
-                  key={platform}
-                  href="#"
+                  key={`contact-${platform+link}`}
+                  href={link}
                   className="px-4 py-2 rounded-full glass-card border border-border/50 hover:border-primary/50 text-sm font-medium flex items-center gap-2 group"
                   whileHover={{ scale: 1.02 }}
                 >
