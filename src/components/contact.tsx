@@ -2,182 +2,114 @@
 
 import { SOCIAL_MEDIA } from "@/data/profile";
 import { motion } from "framer-motion";
-import { Send, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
-import { useState } from "react";
+import { Clock, ArrowUpRight, Globe } from "lucide-react";
 
 const Contact = () => {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formState);
-  };
-
   return (
     <section id="contact" className="py-32 relative overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0 animated-bg opacity-40" />
 
-      {/* Background decorations */}
       <motion.div
-        className="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-primary/10 blur-[120px]"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
-        transition={{ duration: 10, repeat: Infinity }}
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[160px]"
+        animate={{ scale: [1, 1.1, 1], opacity: [0.15, 0.25, 0.15] }}
+        transition={{ duration: 12, repeat: Infinity }}
       />
 
-      <div className="container relative z-10 px-6">
+      <div className="container relative z-10 px-6 max-w-6xl mx-auto">
+        {/* Header */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7 }}
         >
-          <span className="text-sm font-mono text-primary mb-4 block">
-            GET IN TOUCH
+          <span className="text-sm font-mono text-primary tracking-wider block mb-4">
+            CONNECT
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Let's <span className="text-gradient">collaborate</span>
+
+          <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            Let’s build from{" "}
+            <span className="text-gradient">Argentina 🇦🇷</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Have a project in mind? Let's build something amazing together.
+
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            I’m active across my social platforms. If you have an idea,
+            opportunity, or collaboration in mind — let’s talk.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto">
-          {/* Contact Info */}
-          <motion.div
-            className="lg:col-span-2 space-y-6"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="p-6 rounded-2xl glass-card border border-border/50">
-              <div className="flex items-center gap-4 mb-4">
+        {/* Center Card */}
+        <motion.div
+          className="relative rounded-3xl glass-card border border-border/50 p-12 overflow-hidden"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          {/* Soft gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col gap-16">
+            {/* Top row: location + availability */}
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+              <div className="flex items-center gap-4">
                 <div className="p-3 rounded-xl bg-primary/10">
-                  <Mail className="w-5 h-5 text-primary" />
+                  <Globe className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <a
-                    href="mailto:alex@example.com"
-                    className="font-medium hover:text-primary transition-colors"
-                  >
-                    alex@example.com
-                  </a>
+                  <p className="text-sm text-muted-foreground">Based in</p>
+                  <p className="font-semibold text-lg">Argentina</p>
                 </div>
               </div>
-            </div>
 
-            <div className="p-6 rounded-2xl glass-card border border-border/50">
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4">
                 <div className="p-3 rounded-xl bg-secondary/10">
-                  <MapPin className="w-5 h-5 text-secondary" />
+                  <Clock className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="font-medium">San Francisco, CA</p>
+                  <p className="text-sm text-muted-foreground">
+                    Availability
+                  </p>
+                  <p className="font-semibold text-lg">
+                    Open to opportunities
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl glass-card border border-border/50">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 rounded-xl bg-primary/10">
-                  <Clock className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Availability</p>
-                  <p className="font-medium">Open to opportunities</p>
-                </div>
-              </div>
-            </div>
+            {/* Divider */}
+            <div className="h-px w-full bg-border/50" />
 
-            {/* Quick links */}
-            <div className="flex flex-wrap gap-3 pt-4">
+            {/* Social Grid */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {Object.entries(SOCIAL_MEDIA).map(([platform, link]) => (
                 <motion.a
-                  key={`contact-${platform+link}`}
+                  key={`contact-${platform + link}`}
                   href={link}
-                  className="px-4 py-2 rounded-full glass-card border border-border/50 hover:border-primary/50 text-sm font-medium flex items-center gap-2 group"
-                  whileHover={{ scale: 1.02 }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative p-6 rounded-2xl border border-border/50 bg-muted/30 hover:bg-muted/50 transition-all duration-300"
+                  whileHover={{ y: -4 }}
                 >
-                  {platform}
-                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-br from-primary/10 to-secondary/10 pointer-events-none" />
+
+                  <div className="relative z-10 flex items-center justify-between">
+                    <div>
+                      <p className="font-semibold text-lg">{platform}</p>
+                      <p className="text-sm text-muted-foreground">
+                        Follow / Connect
+                      </p>
+                    </div>
+
+                    <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </div>
                 </motion.a>
               ))}
             </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.form
-            className="lg:col-span-3 p-8 rounded-3xl glass-card border border-border/50"
-            onSubmit={handleSubmit}
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
-                  <input
-                    type="text"
-                    placeholder="John Doe"
-                    value={formState.name}
-                    onChange={(e) =>
-                      setFormState({ ...formState, name: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-muted-foreground/50"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="john@example.com"
-                    value={formState.email}
-                    onChange={(e) =>
-                      setFormState({ ...formState, email: e.target.value })
-                    }
-                    className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all placeholder:text-muted-foreground/50"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Message
-                </label>
-                <textarea
-                  placeholder="Tell me about your project..."
-                  rows={5}
-                  value={formState.message}
-                  onChange={(e) =>
-                    setFormState({ ...formState, message: e.target.value })
-                  }
-                  className="w-full px-4 py-3 rounded-xl bg-muted/50 border border-border focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-all resize-none placeholder:text-muted-foreground/50"
-                />
-              </div>
-              <motion.button
-                type="submit"
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.99 }}
-              >
-                Send Message
-                <Send className="w-4 h-4" />
-              </motion.button>
-            </div>
-          </motion.form>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
