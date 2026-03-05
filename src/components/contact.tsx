@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-32 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 animated-bg opacity-40" />
+      <div className="absolute inset-0 opacity-40" />
 
       <motion.div
         className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[160px]"

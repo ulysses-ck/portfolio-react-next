@@ -89,7 +89,7 @@ const expertise = [
 const Skills = () => {
   return (
     <section id="skills" className="py-32 relative overflow-hidden">
-      <div className="absolute inset-0 animated-bg opacity-50" />
+      <div className="absolute inset-0 opacity-50" />
 
       <div className="container relative z-10 px-6">
         <motion.div
