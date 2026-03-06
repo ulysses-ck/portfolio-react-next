@@ -1,7 +1,0 @@
-.LanguageSelectUl {
-	position: absolute;
-	top: calc(100% + 5px);
-	display: flex;
-	padding: 8px;
-	flex-direction: column;
-}
