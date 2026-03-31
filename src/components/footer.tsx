@@ -5,7 +5,7 @@ import { Heart } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-8 border-t border-border/50">
+    <footer className="py-8 border-t border-border/50 flex justify-center">
       <div className="container px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <motion.a

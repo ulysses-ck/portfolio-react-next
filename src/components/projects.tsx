@@ -216,7 +216,7 @@ export const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-32 relative overflow-hidden">
+    <section id="projects" className="py-32 relative overflow-hidden flex justify-center">
       <div className="container relative z-10 px-6">
         <motion.div
           className="text-center mb-20"

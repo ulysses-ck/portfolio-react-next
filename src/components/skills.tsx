@@ -88,7 +88,7 @@ const expertise = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-32 relative overflow-hidden">
+    <section id="skills" className="py-32 relative overflow-hidden flex justify-center">
       <div className="absolute inset-0 opacity-50" />
 
       <div className="container relative z-10 px-6">

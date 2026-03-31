@@ -29,7 +29,7 @@ const experience = [
 
 const About = () => {
   return (
-    <section id="about" className="py-32 relative overflow-hidden">
+    <section id="about" className="py-32 relative overflow-hidden flex justify-center">
       <div className="absolute inset-0 opacity-30" />
 
       <div className="container relative z-10 px-6">
