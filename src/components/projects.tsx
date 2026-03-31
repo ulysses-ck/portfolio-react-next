@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Layers } from "lucide-react";
+import { useMemo, useState } from "react";
 
 import dictappImage from "@/assets/dictapp.png";
 import carlasfoodImage from "@/assets/carlasfood.png";
@@ -215,6 +216,34 @@ export const projects = [
 ];
 
 const Projects = () => {
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+
+  const allTags = useMemo(
+    () =>
+      Array.from(new Set(projects.flatMap((project) => project.tags))).sort((a, b) =>
+        a.localeCompare(b),
+      ),
+    [],
+  );
+
+  const filteredProjects = useMemo(() => {
+    if (selectedTags.length === 0) return projects;
+
+    // OR filter: show projects matching at least one selected tech.
+    return projects.filter((project) =>
+      selectedTags.some((tag) => project.tags.includes(tag)),
+    );
+  }, [selectedTags]);
+
+  const featuredProjects = filteredProjects.filter((project) => project.featured);
+  const regularProjects = filteredProjects.filter((project) => !project.featured);
+
+  const toggleTag = (tag: string) => {
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((item) => item !== tag) : [...prev, tag],
+    );
+  };
+
   return (
     <section id="projects" className="py-32 relative overflow-hidden flex justify-center">
       <div className="container relative z-10 px-6">
@@ -237,14 +266,63 @@ const Projects = () => {
           </p>
         </motion.div>
 
+        {/* Filters */}
+        <motion.div
+          className="mb-12 flex flex-wrap items-center justify-center gap-3"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <button
+            className={`rounded-full border px-4 py-2 text-sm font-mono transition-all ${
+              selectedTags.length === 0
+                ? "border-primary/50 bg-primary/10 text-primary"
+                : "border-border/50 bg-muted/40 text-muted-foreground hover:border-primary/40 hover:text-primary"
+            }`}
+            onClick={() => setSelectedTags([])}
+          >
+            All
+          </button>
+
+          {allTags.map((tag) => {
+            const active = selectedTags.includes(tag);
+            return (
+              <button
+                key={tag}
+                className={`rounded-full border px-4 py-2 text-sm font-mono transition-all ${
+                  active
+                    ? "border-primary/50 bg-primary/10 text-primary"
+                    : "border-border/50 bg-muted/40 text-muted-foreground hover:border-primary/40 hover:text-primary"
+                }`}
+                onClick={() => toggleTag(tag)}
+              >
+                {tag}
+              </button>
+            );
+          })}
+        </motion.div>
+
+        {filteredProjects.length === 0 && (
+          <div className="mb-8 rounded-2xl border border-border/50 glass-card p-8 text-center">
+            <p className="text-muted-foreground mb-4">
+              No hay proyectos para esa combinacion de tecnologias.
+            </p>
+            <button
+              className="rounded-full border border-primary/50 px-4 py-2 text-sm font-mono text-primary hover:bg-primary/10 transition-colors"
+              onClick={() => setSelectedTags([])}
+            >
+              Clear filters
+            </button>
+          </div>
+        )}
+
         {/* Featured Projects */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          {projects
-            .filter((p) => p.featured)
-            .map((project, index) => (
+        <div className="grid lg:grid-cols-2 gap-8 mb-12 place-items-center">
+          {featuredProjects.map((project, index) => (
               <motion.div
                 key={project.title}
-                className="group relative rounded-3xl overflow-hidden glass-card border border-border/50 hover:border-primary/30 transition-all duration-500"
+                className="group relative w-full max-w-2xl rounded-3xl overflow-hidden glass-card border border-border/50 hover:border-primary/30 transition-all duration-500"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -260,7 +338,7 @@ const Projects = () => {
                     transition={{ duration: 0.6 }}
                   />
                   <div
-                    className={`absolute inset-0 bg-gradient-to-t ${project.color} to-background/90`}
+                    className={`absolute inset-0 bg-linear-to-t ${project.color} to-background/90`}
                   />
 
                   {/* Hover overlay */}
@@ -323,13 +401,11 @@ const Projects = () => {
         </div>
 
         {/* Other Projects */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {projects
-            .filter((p) => !p.featured)
-            .map((project, index) => (
+        <div className="grid md:grid-cols-2 gap-6 place-items-center">
+          {regularProjects.map((project, index) => (
               <motion.div
                 key={project.title}
-                className="group p-6 rounded-2xl glass-card border border-border/50 hover:border-primary/30 transition-all duration-300"
+                className="group w-full max-w-xl p-6 rounded-2xl glass-card border border-border/50 hover:border-primary/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
