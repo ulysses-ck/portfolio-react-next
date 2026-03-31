@@ -7,43 +7,6 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/20 blur-[100px] pulse-glow"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 8, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-secondary/20 blur-[80px] pulse-glow"
-          animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] }}
-          transition={{ duration: 6, repeat: Infinity, delay: 1 }}
-        />
-      </div>
-
-      {/* Floating geometric shapes */}
-      <motion.div
-        className="absolute top-20 right-20 w-20 h-20 border border-primary/30 rounded-lg floating"
-        style={{ animationDelay: "0s" }}
-        initial={{ opacity: 0, rotate: 45 }}
-        animate={{ opacity: 1, rotate: 45 }}
-        transition={{ duration: 1, delay: 0.5 }}
-      />
-      <motion.div
-        className="absolute bottom-32 left-16 w-16 h-16 border border-secondary/30 rounded-full floating"
-        style={{ animationDelay: "2s" }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.8 }}
-      />
-      <motion.div
-        className="absolute top-1/3 left-10 w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg floating"
-        style={{ animationDelay: "4s" }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      />
-
       <div className="container relative z-10 px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
