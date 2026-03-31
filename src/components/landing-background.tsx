@@ -1,8 +1,129 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
+type CursorShape = {
+  x: number;
+  y: number;
+  rotation: number;
+  scale: number;
+};
+
+const SHAPE_SIZE = 84;
+const LERP = 0.1;
+const TRAIL_STEPS = 7;
 
 const LandingBackground = () => {
+  const [trail, setTrail] = useState<CursorShape[]>(() =>
+    Array.from({ length: TRAIL_STEPS }, () => ({
+      x: 0,
+      y: 0,
+      rotation: 0,
+      scale: 1,
+    })),
+  );
+
+  const mouseRef = useRef({ x: 0, y: 0 });
+  const leadRef = useRef<CursorShape>({
+    x: 0,
+    y: 0,
+    rotation: 0,
+    scale: 1,
+  });
+  const trailRef = useRef<CursorShape[]>(
+    Array.from({ length: TRAIL_STEPS }, () => ({
+      x: 0,
+      y: 0,
+      rotation: 0,
+      scale: 1,
+    })),
+  );
+  const seedRef = useRef({ phase: 0.35, speed: 0.012, swirl: 36, spin: 0.4 });
+
+  useEffect(() => {
+    const updateSeed = () => {
+      seedRef.current = {
+        phase: Math.random() * Math.PI * 2,
+        speed: 0.008 + Math.random() * 0.01,
+        swirl: 24 + Math.random() * 30,
+        spin: 0.22 + Math.random() * 0.42,
+      };
+    };
+
+    const onMouseMove = (event: MouseEvent) => {
+      mouseRef.current = { x: event.clientX, y: event.clientY };
+    };
+
+    const center = { x: globalThis.innerWidth / 2, y: globalThis.innerHeight / 2 };
+    mouseRef.current = center;
+    leadRef.current = { x: center.x, y: center.y, rotation: 0, scale: 1 };
+    trailRef.current = Array.from({ length: TRAIL_STEPS }, () => ({
+      x: center.x,
+      y: center.y,
+      rotation: 0,
+      scale: 1,
+    }));
+    setTrail(trailRef.current);
+
+    updateSeed();
+    const proceduralTimer = globalThis.setInterval(updateSeed, 2800);
+    globalThis.addEventListener("mousemove", onMouseMove);
+
+    let rafId = 0;
+    const render = () => {
+      const time = performance.now();
+      const seed = seedRef.current;
+
+      const baseX = mouseRef.current.x;
+      const baseY = mouseRef.current.y;
+      const wave = Math.sin(time * seed.speed + seed.phase);
+      const wave2 = Math.cos(time * seed.speed * 0.85 + seed.phase);
+      const offsetX = wave * seed.swirl;
+      const offsetY = wave2 * (seed.swirl * 0.7);
+
+      leadRef.current.x += (baseX + offsetX - leadRef.current.x) * LERP;
+      leadRef.current.y += (baseY + offsetY - leadRef.current.y) * LERP;
+      leadRef.current.rotation = wave * 18 + time * seed.spin * 0.02;
+      leadRef.current.scale = 0.98 + (wave + 1) * 0.025;
+
+      const nextTrail = [...trailRef.current];
+      nextTrail[0] = {
+        x: leadRef.current.x,
+        y: leadRef.current.y,
+        rotation: leadRef.current.rotation,
+        scale: leadRef.current.scale,
+      };
+
+      for (let i = 1; i < nextTrail.length; i += 1) {
+        const prev = nextTrail[i - 1];
+        const current = nextTrail[i];
+        const followFactor = 0.22 - i * 0.02;
+        const clampedFollow = Math.max(followFactor, 0.08);
+
+        nextTrail[i] = {
+          x: current.x + (prev.x - current.x) * clampedFollow,
+          y: current.y + (prev.y - current.y) * clampedFollow,
+          rotation: current.rotation + (prev.rotation - current.rotation) * 0.18,
+          scale: Math.max(0.78, prev.scale - i * 0.035),
+        };
+      }
+
+      trailRef.current = nextTrail;
+      setTrail(nextTrail);
+
+      rafId = globalThis.requestAnimationFrame(render);
+    };
+
+    rafId = globalThis.requestAnimationFrame(render);
+
+    return () => {
+      globalThis.clearInterval(proceduralTimer);
+      globalThis.removeEventListener("mousemove", onMouseMove);
+      globalThis.cancelAnimationFrame(rafId);
+    };
+  }, []);
+
   return (
     <div
       aria-hidden="true"
@@ -10,48 +131,41 @@ const LandingBackground = () => {
     >
       <div className="absolute inset-0 animated-bg" />
 
-      <motion.div
-        className="absolute top-[8vh] left-[8%] h-80 w-80 rounded-full bg-primary/20 blur-[100px] pulse-glow"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.25, 0.45, 0.25] }}
-        transition={{ duration: 8, repeat: Infinity }}
-      />
-      <motion.div
-        className="absolute top-[60vh] right-[6%] h-96 w-96 rounded-full bg-secondary/20 blur-[100px] pulse-glow"
-        animate={{ scale: [1.15, 1, 1.15], opacity: [0.2, 0.4, 0.2] }}
-        transition={{ duration: 7, repeat: Infinity, delay: 0.7 }}
-      />
-      <motion.div
-        className="absolute top-[130vh] left-[14%] h-96 w-96 rounded-full bg-primary/15 blur-[120px] pulse-glow"
-        animate={{ scale: [1, 1.18, 1], opacity: [0.2, 0.38, 0.2] }}
-        transition={{ duration: 9, repeat: Infinity, delay: 1.2 }}
-      />
-      <motion.div
-        className="absolute top-[195vh] right-[12%] h-80 w-80 rounded-full bg-secondary/15 blur-[110px] pulse-glow"
-        animate={{ scale: [1.1, 1, 1.1], opacity: [0.18, 0.35, 0.18] }}
-        transition={{ duration: 8, repeat: Infinity, delay: 1.8 }}
-      />
+      <div className="pointer-events-none fixed inset-0">
+        {trail
+          .slice()
+          .reverse()
+          .map((shape, reverseIndex) => {
+            const index = trail.length - 1 - reverseIndex;
+            const opacity = 0.08 + (index + 1) / trail.length / 2.2;
+            const borderClass =
+              index === 0 ? "border-primary/55" : "border-primary/25";
 
-      <motion.div
-        className="floating absolute top-20 right-20 h-20 w-20 rounded-lg border border-primary/30"
-        style={{ animationDelay: "0s" }}
-        initial={{ opacity: 0.7, rotate: 45 }}
-        animate={{ opacity: 1, rotate: 45 }}
-        transition={{ duration: 1 }}
-      />
-      <motion.div
-        className="floating absolute top-[105vh] left-10 h-12 w-12 rounded-lg bg-linear-to-br from-primary/20 to-secondary/20"
-        style={{ animationDelay: "2s" }}
-        initial={{ opacity: 0.65 }}
-        animate={{ opacity: 0.95 }}
-        transition={{ duration: 1 }}
-      />
-      <motion.div
-        className="floating absolute top-[220vh] right-24 h-16 w-16 rounded-full border border-secondary/30"
-        style={{ animationDelay: "4s" }}
-        initial={{ opacity: 0.65 }}
-        animate={{ opacity: 0.95 }}
-        transition={{ duration: 1 }}
-      />
+            return (
+              <motion.div
+                key={`trail-${index}`}
+                className={`absolute rounded-xl border ${borderClass}`}
+                style={{
+                  width: SHAPE_SIZE,
+                  height: SHAPE_SIZE,
+                  left: shape.x - SHAPE_SIZE / 2,
+                  top: shape.y - SHAPE_SIZE / 2,
+                  rotate: shape.rotation,
+                  scale: shape.scale,
+                  opacity,
+                  boxShadow:
+                    index === 0
+                      ? "0 0 28px hsl(175 80% 50% / 0.22)"
+                      : "none",
+                }}
+              >
+                {index === 0 && (
+                  <div className="absolute inset-3 rounded-md border border-primary/30" />
+                )}
+              </motion.div>
+            );
+          })}
+      </div>
     </div>
   );
 };
