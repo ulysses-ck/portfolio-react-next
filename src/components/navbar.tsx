@@ -40,7 +40,7 @@ const Navbar = () => {
             className="text-xl font-bold font-mono"
             whileHover={{ scale: 1.02 }}
           >
-            <span className="text-gradient">{"<AC />"}</span>
+            <span className="text-gradient">{"<ULY />"}</span>
           </motion.a>
 
           {/* Desktop Navigation */}

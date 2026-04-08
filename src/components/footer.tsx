@@ -13,7 +13,7 @@ const Footer = () => {
             className="text-lg font-bold font-mono"
             whileHover={{ scale: 1.02 }}
           >
-            <span className="text-gradient">{"<AC />"}</span>
+            <span className="text-gradient">{"<ULY />"}</span>
           </motion.a>
 
           <p className="text-sm text-muted-foreground flex items-center gap-1">
