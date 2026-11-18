@@ -1,0 +1,127 @@
+{
+  "Metadata": {
+    "title": "Ulises Apaza — Desarrollador Fullstack",
+    "description": "Ingeniero de Software enfocado en sistemas fullstack escalables con Java (Spring Boot) y Next.js. Arquitecturas robustas, APIs modernas e interfaces de alto rendimiento."
+  },
+  "Nav": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "hireMe": "Contrátame",
+    "menu": "Navegación principal",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "Hero": {
+    "badge": "Disponible para oportunidades",
+    "greeting": "Hola, soy",
+    "name": "Ulises",
+    "tagline": "<role>Desarrollador Fullstack</role> creando interfaces <primary>pixel-perfect</primary> y <secondary>backends robustos</secondary>",
+    "viewProjects": "Ver proyectos",
+    "getInTouch": "Contactame",
+    "explore": "Explorá mi trabajo",
+    "github": "Perfil de GitHub",
+    "linkedin": "Perfil de LinkedIn",
+    "email": "Envíame un email"
+  },
+  "About": {
+    "label": "SOBRE MÍ",
+    "title": "Construyendo software <gradient>escalable</gradient> y plataformas web modernas",
+    "p1": "Soy un Ingeniero de Software enfocado en construir sistemas escalables de punta a punta usando <strong>Java (Spring Boot)</strong> y <strong>Next.js</strong>. Me especializo en diseñar arquitecturas robustas, integrar APIs modernas y entregar aplicaciones de alto rendimiento para entornos de producción.",
+    "p2": "Mi experiencia abarca desde plataformas SaaS fullstack y sistemas de e-commerce headless hasta servicios backend seguros y herramientas con IA. Trabajé con empresas europeas desarrollando aplicaciones complejas, desplegándolas en infraestructura Linux y optimizándolas para rendimiento, SEO y escalabilidad.",
+    "p3": "Disfruto resolviendo problemas de ingeniería complejos, integrando IA en productos reales y construyendo software que equilibra una arquitectura backend sólida con experiencias frontend modernas y de alta calidad.",
+    "facts": {
+      "location": "Buenos Aires, Argentina",
+      "availability": "Abierto a oportunidades",
+      "education": "Desarrollo de Software @ IFTS Nº18",
+      "experience": "5+ años de experiencia"
+    }
+  },
+  "Experience": {
+    "title": "Experiencia",
+    "wow": {
+      "role": "Ingeniero de Software",
+      "description": "Desarrollé aplicaciones fullstack complejas usando Next.js, TypeScript y Prisma, integrando servicios de Google Cloud Platform y APIs de terceros como Docusign y Holded. Gestioné despliegues en VPS Linux (Ubuntu) con Nginx, PM2 y SSL, y construí interfaces de e-commerce 3D avanzadas con Three.js y ModelViewer mientras optimizaba arquitecturas de contenido con Contentful y Tailwind CSS para rendimiento y SEO."
+    },
+    "companiesWebs": {
+      "role": "Ingeniero de Software",
+      "description": "Diseñé plataformas de alto rendimiento usando Astro, Supabase y Framer Motion para experiencias de usuario de baja latencia. Desarrollé sistemas de e-commerce headless con Shopify, Remix Run y Hydrogen usando APIs GraphQL, e implementé arquitecturas escalables de CMS headless con Sanity.io y Next.js."
+    },
+    "freelancer": {
+      "role": "Desarrollador Fullstack",
+      "description": "Construí diversas soluciones de software incluyendo herramientas de extracción de datos de PDF con IA, integrando Gemini y OpenAI con Next.js y TypeScript. Desarrollé plataformas backend seguras usando Java 21, Spring Boot, Spring Security y autenticación JWT, y optimicé pipelines de procesamiento por lotes a gran escala con Spring Batch."
+    }
+  },
+  "Projects": {
+    "label": "TRABAJO DESTACADO",
+    "title": "Proyectos <gradient>destacados</gradient>",
+    "subtitle": "Una colección de proyectos que muestran mi pasión por construir aplicaciones bellas y funcionales",
+    "featured": "Destacado",
+    "viewCode": "Ver código fuente",
+    "viewLive": "Ver demo en vivo",
+    "items": {
+      "dictapp": "Aplicación web de diccionario que obtiene definiciones y fonética de palabras desde una API externa.",
+      "carlasfood": "Aplicación web de menú para restaurante construida con Express y plantillas Pug.",
+      "timeTracking": "Dashboard para registrar el tiempo dedicado a diferentes actividades con reportes dinámicos.",
+      "unbored": "App de sugerencias de actividades que ayuda a los usuarios a encontrar qué hacer cuando se aburren.",
+      "angularTodo": "Aplicación de gestión de tareas construida con Angular y Tailwind CSS.",
+      "angularBudget": "Aplicación web de gestión de presupuesto construida con Angular.",
+      "angularBmi": "Calculadora de IMC construida con Angular y Tailwind CSS.",
+      "angularSearch": "Aplicación de búsqueda de imágenes usando Angular y APIs de imágenes externas.",
+      "dictionaryVanilla": "Aplicación de diccionario simple construida con JavaScript vanilla.",
+      "angularCreditCard": "Aplicación de gestión de tarjetas de crédito con integración a Firebase.",
+      "reactExpressDynamo": "Aplicación fullstack usando React, Express y DynamoDB alojada en AWS."
+    }
+  },
+  "Skills": {
+    "label": "QUÉ HAGO",
+    "title": "Habilidades y <gradient>experiencia</gradient>",
+    "subtitle": "Uniendo el diseño bello con la funcionalidad poderosa",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de datos",
+      "devops": "DevOps"
+    },
+    "expertise": {
+      "frontend": "Frontend",
+      "frontendDesc": "React, Vue, Next.js",
+      "backend": "Backend",
+      "backendDesc": "Node, Python, Go",
+      "database": "Base de datos",
+      "databaseDesc": "PostgreSQL, MongoDB",
+      "cloud": "Cloud",
+      "cloudDesc": "AWS, Vercel, GCP",
+      "design": "Diseño",
+      "designDesc": "Figma, UI/UX",
+      "security": "Seguridad",
+      "securityDesc": "Auth, Encriptación",
+      "architecture": "Arquitectura",
+      "architectureDesc": "Microservicios",
+      "performance": "Rendimiento",
+      "performanceDesc": "Optimización"
+    }
+  },
+  "Contact": {
+    "label": "CONTACTO",
+    "title": "Construyamos desde <gradient>Argentina 🇦🇷</gradient>",
+    "subtitle": "Estoy activo en mis redes. Si tenés una idea, oportunidad o colaboración en mente — hablemos.",
+    "basedIn": "Resido en",
+    "location": "Argentina",
+    "availability": "Disponibilidad",
+    "openTo": "Abierto a oportunidades",
+    "connect": "Seguir / Conectar",
+    "email": "Email",
+    "emailHint": "Envíame un mensaje"
+  },
+  "Footer": {
+    "crafted": "Hecho con <heart></heart> usando React & Tailwind",
+    "rights": "© {year} Ulises. Todos los derechos reservados."
+  },
+  "A11y": {
+    "themeToggle": "Cambiar tema",
+    "localeSwitcher": "Cambiar idioma",
+    "skipToContent": "Saltar al contenido"
+  }
+}

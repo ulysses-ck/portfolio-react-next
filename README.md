@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Ulises Apaza
 
-## Getting Started
+Personal portfolio built with **Next.js 16**, **React 19**, **Tailwind CSS 4** and **next-intl**.
 
-First, run the development server:
+## Features
+
+- 🌐 **i18n** — English (`/en`) and Spanish (`/es`) with automatic browser language detection and cookie persistence. All content lives in `messages/en.json` and `messages/es.json`.
+- 🌓 **Dark / light theme** — `next-themes` with system preference detection.
+- ✨ **Animations** — framer-motion with `prefers-reduced-motion` support.
+- 🖼️ **Optimized images** — `next/image` for all project screenshots.
+- ⚡ **Static rendering** — both locales are prerendered at build time (SSG).
+- 🧹 **Linting** — Biome 2.
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev      # start dev server
+pnpm build    # production build
+pnpm lint     # biome check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/[locale]/     # pages (layout + home), per-locale routing
+├── components/       # navbar, hero, about, projects, skills, contact, footer…
+├── data/profile.ts   # social links
+├── i18n/             # next-intl routing / navigation / request config
+├── assets/           # project screenshots
+messages/             # en.json / es.json — all UI strings & content
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## i18n conventions
 
-## Learn More
+- Default locale is `en`; visiting `/` redirects based on the `Accept-Language` header.
+- To add a locale: register it in `src/i18n/routing.ts`, add `messages/<locale>.json`, and update `LocaleSwitcher` labels.
+- Translated text uses ICU/rich-text tags (`<gradient>`, `<strong>`, …) rendered via `t.rich`.
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Any Node host or Vercel works out of the box. The proxy (`src/proxy.ts`, Next.js 16's middleware) handles locale detection at the edge.

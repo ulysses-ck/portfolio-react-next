@@ -1,0 +1,127 @@
+{
+  "Metadata": {
+    "title": "Ulises Apaza — Fullstack Developer",
+    "description": "Software Engineer focused on scalable end-to-end systems with Java (Spring Boot) and Next.js. Robust architectures, modern APIs and high-performance interfaces."
+  },
+  "Nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "hireMe": "Hire me",
+    "menu": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "Hero": {
+    "badge": "Available for opportunities",
+    "greeting": "Hi, I'm",
+    "name": "Ulises",
+    "tagline": "<role>Fullstack Developer</role> crafting <primary>pixel-perfect</primary> interfaces and <secondary>robust backends</secondary>",
+    "viewProjects": "View projects",
+    "getInTouch": "Get in touch",
+    "explore": "Explore my work",
+    "github": "GitHub profile",
+    "linkedin": "LinkedIn profile",
+    "email": "Send me an email"
+  },
+  "About": {
+    "label": "ABOUT ME",
+    "title": "Building <gradient>scalable</gradient> software & modern web platforms",
+    "p1": "I'm a Software Engineer focused on building scalable end-to-end systems using <strong>Java (Spring Boot)</strong> and <strong>Next.js</strong>. I specialize in designing robust architectures, integrating modern APIs, and delivering high-performance applications for production environments.",
+    "p2": "My experience ranges from fullstack SaaS platforms and headless e-commerce systems to secure backend services and AI-powered tools. I have worked with European companies developing complex applications, deploying them on Linux infrastructure, and optimizing them for performance, SEO, and scalability.",
+    "p3": "I enjoy solving complex engineering problems, integrating AI into real products, and building software that balances strong backend architecture with modern, high-quality frontend experiences.",
+    "facts": {
+      "location": "Buenos Aires, Argentina",
+      "availability": "Open to opportunities",
+      "education": "Software Development @ IFTS Nº18",
+      "experience": "5+ Years Experience"
+    }
+  },
+  "Experience": {
+    "title": "Experience",
+    "wow": {
+      "role": "Software Engineer",
+      "description": "Developed complex fullstack applications using Next.js, TypeScript and Prisma, integrating Google Cloud Platform services and third-party APIs such as Docusign and Holded. Managed Linux (Ubuntu) VPS deployments with Nginx, PM2 and SSL, and built advanced 3D e-commerce interfaces with Three.js and ModelViewer while optimizing content architectures with Contentful and Tailwind CSS for performance and SEO."
+    },
+    "companiesWebs": {
+      "role": "Software Engineer",
+      "description": "Designed high-performance platforms using Astro, Supabase and Framer Motion for low-latency user experiences. Developed headless e-commerce systems with Shopify, Remix Run and Hydrogen using GraphQL APIs, and implemented scalable headless CMS architectures with Sanity.io and Next.js."
+    },
+    "freelancer": {
+      "role": "Fullstack Developer",
+      "description": "Built diverse software solutions including AI-powered PDF data extraction tools integrating Gemini and OpenAI with Next.js and TypeScript. Developed secure backend platforms using Java 21, Spring Boot, Spring Security and JWT authentication, and optimized large-scale batch processing pipelines with Spring Batch."
+    }
+  },
+  "Projects": {
+    "label": "FEATURED WORK",
+    "title": "Selected <gradient>Projects</gradient>",
+    "subtitle": "A collection of projects that showcase my passion for building beautiful, functional applications",
+    "featured": "Featured",
+    "viewCode": "View source code",
+    "viewLive": "View live demo",
+    "items": {
+      "dictapp": "Web dictionary application that fetches word definitions and phonetics from an external API.",
+      "carlasfood": "Restaurant menu web application built with Express and Pug templates.",
+      "timeTracking": "Dashboard to track time spent on different activities with dynamic reports.",
+      "unbored": "Activity suggestion app that helps users find things to do when they are bored.",
+      "angularTodo": "Task management application built with Angular and Tailwind CSS.",
+      "angularBudget": "Budget management web application built with Angular.",
+      "angularBmi": "BMI calculator web application built with Angular and Tailwind CSS.",
+      "angularSearch": "Image search application using Angular and external image APIs.",
+      "dictionaryVanilla": "Simple dictionary application built using vanilla JavaScript.",
+      "angularCreditCard": "Credit card management application with Firebase integration.",
+      "reactExpressDynamo": "Fullstack application using React, Express and DynamoDB hosted on AWS."
+    }
+  },
+  "Skills": {
+    "label": "WHAT I DO",
+    "title": "Skills & <gradient>Expertise</gradient>",
+    "subtitle": "Bridging the gap between beautiful design and powerful functionality",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "devops": "DevOps"
+    },
+    "expertise": {
+      "frontend": "Frontend",
+      "frontendDesc": "React, Vue, Next.js",
+      "backend": "Backend",
+      "backendDesc": "Node, Python, Go",
+      "database": "Database",
+      "databaseDesc": "PostgreSQL, MongoDB",
+      "cloud": "Cloud",
+      "cloudDesc": "AWS, Vercel, GCP",
+      "design": "Design",
+      "designDesc": "Figma, UI/UX",
+      "security": "Security",
+      "securityDesc": "Auth, Encryption",
+      "architecture": "Architecture",
+      "architectureDesc": "Microservices",
+      "performance": "Performance",
+      "performanceDesc": "Optimization"
+    }
+  },
+  "Contact": {
+    "label": "CONNECT",
+    "title": "Let's build from <gradient>Argentina 🇦🇷</gradient>",
+    "subtitle": "I'm active across my social platforms. If you have an idea, opportunity, or collaboration in mind — let's talk.",
+    "basedIn": "Based in",
+    "location": "Argentina",
+    "availability": "Availability",
+    "openTo": "Open to opportunities",
+    "connect": "Follow / Connect",
+    "email": "Email",
+    "emailHint": "Send me a message"
+  },
+  "Footer": {
+    "crafted": "Crafted with <heart></heart> using React & Tailwind",
+    "rights": "© {year} Ulises. All rights reserved."
+  },
+  "A11y": {
+    "themeToggle": "Toggle theme",
+    "localeSwitcher": "Change language",
+    "skipToContent": "Skip to content"
+  }
+}

@@ -1,60 +1,54 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Layers } from "lucide-react";
-
-import dictappImage from "@/assets/dictapp.png";
-import carlasfoodImage from "@/assets/carlasfood.png";
-import timeTrackingDashboardImage from "@/assets/time-tracking-dashboard.png";
-import unboredImage from "@/assets/unbored.png";
+import { ExternalLink, Layers } from "lucide-react";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import angularBmiImage from "@/assets/angular-bmi-calculator.png";
+import angularBudgetImage from "@/assets/angular-budget.png";
+import angularCreditCardImage from "@/assets/angular-credit-card.png";
+import angularSearchImage from "@/assets/angular-images.png";
 
 import angularTodoImage from "@/assets/angular-todo.png";
-import angularBudgetImage from "@/assets/angular-budget.png";
-import angularBmiImage from "@/assets/angular-bmi-calculator.png";
-import angularSearchImage from "@/assets/angular-images.png";
-import angularCreditCardImage from "@/assets/angular-credit-card.png";
-
+import carlasfoodImage from "@/assets/carlasfood.png";
+import dictappImage from "@/assets/dictapp.png";
 import dictionaryAppImage from "@/assets/dictionary-app.png";
 import reactExpressDymamoDBImage from "@/assets/react-express-dynamodb.png";
+import timeTrackingDashboardImage from "@/assets/time-tracking-dashboard.png";
+import unboredImage from "@/assets/unbored.png";
+import { GithubIcon } from "@/components/icons";
 
 export const projects = [
   {
+    id: "dictapp",
     title: "Dictionary App",
-    description:
-      "Web dictionary application that fetches word definitions and phonetics from an external API.",
     image: dictappImage,
     tags: ["React", "JavaScript", "HTML", "CSS", "Node.js", "Git", "Netlify"],
-    color: "from-primary/20 to-secondary/20",
     featured: true,
     publishUrl: "https://dictapp.netlify.app/",
     repoUrl: "",
   },
   {
+    id: "carlasfood",
     title: "Carla's Food",
-    description:
-      "Restaurant menu web application built with Express and Pug templates.",
     image: carlasfoodImage,
     tags: ["Node.js", "Express.js", "JavaScript", "HTML", "CSS", "Pug", "Git"],
-    color: "from-secondary/20 to-primary/20",
     featured: false,
     publishUrl: "",
     repoUrl: "https://github.com/ulysses-ck/carlasfood",
   },
   {
+    id: "timeTracking",
     title: "Time Tracking Dashboard",
-    description:
-      "Dashboard to track time spent on different activities with dynamic reports.",
     image: timeTrackingDashboardImage,
     tags: ["React", "JavaScript", "HTML", "CSS", "Node.js", "Vercel"],
-    color: "from-primary/20 to-secondary/20",
     featured: true,
     publishUrl: "http://time-tracking-dashboard-roan.vercel.app/",
     repoUrl: "",
   },
   {
+    id: "unbored",
     title: "Unbored",
-    description:
-      "Activity suggestion app that helps users find things to do when they are bored.",
     image: unboredImage,
     tags: [
       "Next.js",
@@ -69,15 +63,13 @@ export const projects = [
       "Prettier",
       "Netlify",
     ],
-    color: "from-secondary/20 to-primary/20",
     featured: true,
     publishUrl: "https://unbored.netlify.app/",
     repoUrl: "",
   },
   {
+    id: "angularTodo",
     title: "Angular Todo App",
-    description:
-      "Task management application built with Angular and Tailwind CSS.",
     image: angularTodoImage,
     tags: [
       "Angular",
@@ -90,14 +82,13 @@ export const projects = [
       "Prettier",
       "Netlify",
     ],
-    color: "from-primary/20 to-secondary/20",
     featured: false,
     publishUrl: "https://calm-llama-ae8039.netlify.app/",
     repoUrl: "",
   },
   {
+    id: "angularBudget",
     title: "Angular Budget",
-    description: "Budget management web application built with Angular.",
     image: angularBudgetImage,
     tags: [
       "Angular",
@@ -109,15 +100,13 @@ export const projects = [
       "Prettier",
       "Vercel",
     ],
-    color: "from-secondary/20 to-primary/20",
     featured: false,
     publishUrl: "https://angular-budget-seven.vercel.app/",
     repoUrl: "",
   },
   {
+    id: "angularBmi",
     title: "Angular BMI Calculator",
-    description:
-      "BMI calculator web application built with Angular and Tailwind CSS.",
     image: angularBmiImage,
     tags: [
       "Angular",
@@ -130,15 +119,13 @@ export const projects = [
       "Prettier",
       "Netlify",
     ],
-    color: "from-primary/20 to-secondary/20",
     featured: false,
     publishUrl: "https://heartfelt-profiterole-ddaf4e.netlify.app/",
     repoUrl: "",
   },
   {
+    id: "angularSearch",
     title: "Angular Search Images",
-    description:
-      "Image search application using Angular and external image APIs.",
     image: angularSearchImage,
     tags: [
       "Angular",
@@ -150,26 +137,22 @@ export const projects = [
       "Prettier",
       "Netlify",
     ],
-    color: "from-secondary/20 to-primary/20",
     featured: false,
     publishUrl: "https://angular-search-images.vercel.app/",
     repoUrl: "",
   },
   {
+    id: "dictionaryVanilla",
     title: "Dictionary App (Vanilla)",
-    description:
-      "Simple dictionary application built using vanilla JavaScript.",
     image: dictionaryAppImage,
     tags: ["JavaScript", "HTML", "CSS", "Git", "Netlify"],
-    color: "from-primary/20 to-secondary/20",
     featured: false,
     publishUrl: "https://safjkib2pr.netlify.app/",
     repoUrl: "",
   },
   {
+    id: "angularCreditCard",
     title: "Angular Credit Card Manager",
-    description:
-      "Credit card management application with Firebase integration.",
     image: angularCreditCardImage,
     tags: [
       "Angular",
@@ -183,16 +166,14 @@ export const projects = [
       "Prettier",
       "Netlify",
     ],
-    color: "from-secondary/20 to-primary/20",
     featured: false,
     publishUrl:
       "https://6481663a0da9322601e3bcf2--candid-douhua-47bd82.netlify.app/",
     repoUrl: "",
   },
   {
+    id: "reactExpressDynamo",
     title: "React Express DynamoDB",
-    description:
-      "Fullstack application using React, Express and DynamoDB hosted on AWS.",
     image: reactExpressDymamoDBImage,
     tags: [
       "React",
@@ -207,7 +188,6 @@ export const projects = [
       "ESLint",
       "Prettier",
     ],
-    color: "from-primary/20 to-secondary/20",
     featured: true,
     publishUrl: "",
     repoUrl: "https://github.com/ulysses-ck/express-react-dynamodb",
@@ -215,9 +195,14 @@ export const projects = [
 ];
 
 const Projects = () => {
+  const t = useTranslations("Projects");
+
   return (
-    <section id="projects" className="py-32 relative overflow-hidden">
-      <div className="container relative z-10 px-6">
+    <section
+      id="projects"
+      className="py-32 relative overflow-hidden scroll-mt-20"
+    >
+      <div className="container mx-auto relative z-10 px-6">
         <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
@@ -226,14 +211,17 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="text-sm font-mono text-primary mb-4 block">
-            FEATURED WORK
+            {t("label")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Selected <span className="text-gradient">Projects</span>
+            {t.rich("title", {
+              gradient: (chunks) => (
+                <span className="text-gradient">{chunks}</span>
+              ),
+            })}
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            A collection of projects that showcase my passion for building
-            beautiful, functional applications
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -242,8 +230,8 @@ const Projects = () => {
           {projects
             .filter((p) => p.featured)
             .map((project, index) => (
-              <motion.div
-                key={project.title}
+              <motion.article
+                key={project.id}
                 className="group relative rounded-3xl overflow-hidden glass-card border border-border/50 hover:border-primary/30 transition-all duration-500"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -252,29 +240,31 @@ const Projects = () => {
               >
                 {/* Project Image */}
                 <div className="relative h-64 overflow-hidden">
-                  <motion.img
-                    src={project.image.src}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.6 }}
+                  <Image
+                    src={project.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div
-                    className={`absolute inset-0 bg-gradient-to-t ${project.color} to-background/90`}
+                    className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent"
+                    aria-hidden="true"
                   />
 
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-4">
+                  <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-300 flex items-center justify-center gap-4">
                     {project.repoUrl && (
                       <motion.a
                         href={project.repoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-3 rounded-full glass-card border border-primary/50 hover:glow-effect"
+                        aria-label={`${t("viewCode")} — ${project.title}`}
+                        className="p-3 rounded-full glass-card border border-primary/50 hover:glow-effect focus-visible:outline-2 focus-visible:outline-ring"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <Github className="w-5 h-5 text-primary" />
+                        <GithubIcon className="w-5 h-5 text-primary" />
                       </motion.a>
                     )}
 
@@ -283,7 +273,8 @@ const Projects = () => {
                         href={project.publishUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-3 rounded-full glass-card border border-primary/50 hover:glow-effect"
+                        aria-label={`${t("viewLive")} — ${project.title}`}
+                        className="p-3 rounded-full glass-card border border-primary/50 hover:glow-effect focus-visible:outline-2 focus-visible:outline-ring"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -298,14 +289,14 @@ const Projects = () => {
                   <div className="flex items-center gap-2 mb-3">
                     <Layers className="w-4 h-4 text-primary" />
                     <span className="text-sm font-mono text-primary">
-                      Featured
+                      {t("featured")}
                     </span>
                   </div>
                   <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {project.description}
+                    {t(`items.${project.id}`)}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
@@ -318,7 +309,7 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
         </div>
 
@@ -327,8 +318,8 @@ const Projects = () => {
           {projects
             .filter((p) => !p.featured)
             .map((project, index) => (
-              <motion.div
-                key={project.title}
+              <motion.article
+                key={project.id}
                 className="group p-6 rounded-2xl glass-card border border-border/50 hover:border-primary/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -346,9 +337,10 @@ const Projects = () => {
                         href={project.repoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        aria-label={`${t("viewCode")} — ${project.title}`}
+                        className="text-muted-foreground hover:text-primary transition-colors focus-visible:outline-2 focus-visible:outline-ring"
                       >
-                        <Github className="w-5 h-5" />
+                        <GithubIcon className="w-5 h-5" />
                       </a>
                     )}
 
@@ -357,7 +349,8 @@ const Projects = () => {
                         href={project.publishUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        aria-label={`${t("viewLive")} — ${project.title}`}
+                        className="text-muted-foreground hover:text-primary transition-colors focus-visible:outline-2 focus-visible:outline-ring"
                       >
                         <ExternalLink className="w-5 h-5" />
                       </a>
@@ -368,7 +361,7 @@ const Projects = () => {
                   {project.title}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  {project.description}
+                  {t(`items.${project.id}`)}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.slice(0, 3).map((tag) => (
@@ -380,7 +373,7 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
         </div>
       </div>
